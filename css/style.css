@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: url(../img/bg_repeat.jpg);
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 5px auto;
+}
+
+.title {
+    padding: 5px 10px;
+    line-height: 28px;
+    text-shadow: 0 0 2px #fff;
+    text-align: center;
+}
+
+h1, h2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.labButtons {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0 20px 0;
+}
+
+.infoButtons {
+    width: 22%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 460px;
+}
+
+.labButtons button, .infoButtons button {
+    background: #ececec;
+    border: 2px solid black;
+    padding: 10px 10px;
+    color: black;
+    display: block;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: #393939 0 0 15px;
+    transition-duration: 0.5s;
+}
+
+.labButtons button {
+    width: 130px;
+}
+
+.infoButtons button {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.labButtons button:hover, .infoButtons button:hover {
+    position: relative;
+    top: -5px;
+    border: 2px solid #000;
+    box-shadow: #393939 0 10px 15px;
+}
+
+.labButtons button:active, .infoButtons button:active {
+    border: 2px dashed #000;
+    color: #000;
+}
+
+button.activeButton {
+    font-weight: bold;
+    background: #d4d4d4;
+    border: 3px solid #000;
+    position: relative;
+    top: 3px;
+    box-shadow: none;
+}
+
+button.activeButton:hover {
+    background: #d4d4d4;
+    position: relative;
+    top: 3px;
+    box-shadow: none;
+    color: #000;
+    border: 3px solid #000;
+}
+
+main {
+    margin-bottom: 10px;
+}
+
+.content {
+    border-radius: 0 0 10px 0;
+    background: #ececec;
+    width: 76%;
+    height: 460px;
+    border: 1px solid black;
+    float: right;
+    box-shadow: #393939 5px 5px 15px;
+    padding: 20px;
+    font-size: 18px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.unActive {
+    display: none;
+}
+
+p {
+    text-indent: 30px;
+    padding: 5px;
+    line-height: 22px;
+}
+
+h3 {
+    padding: 3px;
+    text-indent: 30px;
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.structure {
+    display: flex;
+}
+
+.elementImages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+    border-bottom: 1px solid #393939;
+}
+
+.dash {
+    list-style-type: "-";
+}
+
+ul, ol {
+    padding-left: 20px;
+    line-height: 25px;
+}
+
+li {
+    padding: 5px 0;
+}
+
+.elementImages img {
+    padding: 5px 0;
+}
