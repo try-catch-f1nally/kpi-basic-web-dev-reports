@@ -1,0 +1,34 @@
+p {
+    text-indent: 30px;
+    padding: 5px;
+    line-height: 22px;
+}
+
+ul, ol {
+    padding-left: 20px;
+    line-height: 25px;
+}
+
+li {
+    padding: 5px 0;
+}
+
+.dash {
+    list-style-type: "-";
+}
+
+.elementImages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.elementImages img {
+    padding: 5px 0;
+}
+
+.structure {
+    display: flex;
+}
