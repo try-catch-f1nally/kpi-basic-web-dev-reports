@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Var4 Table</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 3px solid #000;
+            width: 60%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .first {
+            background: #fff100;
+            height: 15%;
+        }
+
+        .content_first {
+            border: 3px solid #000;
+            width: 40%;
+            height: 60px;
+            background: #fff;
+            margin: 20px;
+        }
+
+        .second {
+            background: #19109d;
+            width: 33.33%;
+        }
+
+        .paddings_third {
+            width: 33.33%;
+            padding: 20px 10px 20px 20px;
+        }
+
+        .third {
+            border: 3px solid #808080;
+            height: 100%;
+            position: relative;
+        }
+
+        .content_third {
+            height: 100px;
+            width: 100%;
+            background: #d13;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .paddings_fourth {
+            width: 33.33%;
+            padding: 20px 20px 20px 10px;
+        }
+
+        .fourth {
+            background: #19109d;
+            height: 100%;
+        }
+
+        .fifth {
+            background: #fff100;
+            height: 15%;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <tr class="first">
+        <td colspan="3">
+            <div class="content_first"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="second"></td>
+        <td class="paddings_third">
+            <div class="third">
+                <div class="content_third"></div>
+            </div>
+        </td>
+        <td class="paddings_fourth">
+            <div class="fourth"></div>
+        </td>
+    </tr>
+    <tr class="fifth">
+        <td colspan="3"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -3,7 +3,7 @@ function chooseLab(button) {
     if (activeBtn) {
         activeBtn.className = "";
     } else {
-        document.querySelector("main .content").classList.remove("unActive");
+        document.querySelector("main .container").classList.remove("unActive");
     }
     const chosenBtn = document.querySelector(`#${button.id}`);
     chosenBtn.className = "activeButton";
@@ -60,7 +60,7 @@ function chooseInfo(button) {
     if (document.querySelector(".labButtons .activeButton").id === "lab1") {
         switch (button.id) {
             case "description":
-                document.querySelector("main .content").innerHTML =
+                document.querySelector("main .container").innerHTML =
                     "<p> З розвитком інформаційних технологій та зацікавленістю людей до перегляду кіно зріс попит на пошукові" +
                     "                кіносервіси для швидкого підбору фільму. </p>" +
                     "            <p> Наш сервіс – зручна, сучасна, розумна система з багатофільтровим пошуком фільмів за різними параметрами" +
@@ -93,7 +93,7 @@ function chooseInfo(button) {
                     "            </ul>"
                 break;
             case "topic":
-                document.querySelector("main .content").innerHTML =
+                document.querySelector("main .container").innerHTML =
                     "<p><span class='bold'> Тема: </span> структура HTML-документа. Вибір предметної галузі. Робота з" +
                     " посиланнями, таблицями, зображеннями, формами в HTML-документі.</p>" +
                     "<p><span class='bold'> Мета: </span> придбати практичні навички роботи  з HTML-документом, " +
@@ -104,7 +104,7 @@ function chooseInfo(button) {
                     "</span></p>";
                 break;
             case "structure":
-                document.querySelector("main .content").innerHTML = "<div class=\"structure\">" +
+                document.querySelector("main .container").innerHTML = "<div class=\"structure\">" +
                     "                <div><img src=\"img/lab1/structure.png\" alt=\"\"></div>" +
                     "                <div><p><i>index.html</i> - базовий HTML-документ </p>" +
                     "                    <p><i>temp.html</i> - HTML-документ з таблицею та формою</p>" +
@@ -114,7 +114,7 @@ function chooseInfo(button) {
                     "            </div>";
                 break;
             case "tables":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .container").innerHTML = "<div class=\"elementImages\">" +
                     "                <div><img src=\"img/lab1/tableCode.png\" alt=\"\"></div>" +
                     "                <div><img src=\"img/lab1/tableImg.png\" alt=\"\"></div>" +
                     "            </div>" +
@@ -127,7 +127,7 @@ function chooseInfo(button) {
                     "            </div>";
                 break;
             case "forms":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .container").innerHTML = "<div class=\"elementImages\">" +
                     "                <div><img src=\"img/lab1/formCode.png\" alt=\"\"></div>" +
                     "                <div><img src=\"img/lab1/tableImg.png\" alt=\"\"></div>" +
                     "            </div>" +
@@ -139,7 +139,7 @@ function chooseInfo(button) {
                     "            </div>";
                 break;
             case "images":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .container").innerHTML = "<div class=\"elementImages\">" +
                     "                <div><img src=\"img/lab1/imgCode.png\" alt=\"\"></div>" +
                     "                <div><img src=\"img/lab1/imgImgs.png\" alt=\"\"></div>" +
                     "            </div>" +
@@ -148,7 +148,7 @@ function chooseInfo(button) {
                     "            </div>";
                 break;
             case "conclusion":
-                document.querySelector("main .content").innerHTML = "<p> Виконавши дану лабораторну роботу," +
+                document.querySelector("main .container").innerHTML = "<p> Виконавши дану лабораторну роботу," +
                     " ми проаналізували сферу пошукових кіносервісів, що представлені на сучасному ринку, і розробили" +
                     " власний план створення системи багатофільтрового просунутого зручного кіносервісу. Також було" +
                     " створено звітний HTML-документ для відображення результатів роботи всіх лабораторних робіт.</p> ";
@@ -158,7 +158,7 @@ function chooseInfo(button) {
     if (document.querySelector(".labButtons .activeButton").id === "lab2") {
         switch (button.id) {
             case "about":
-                document.querySelector("main .content").innerHTML = "<p><span class='bold'>Тема: </span> Каскадні таблиці стилів. Селектори .ідентифікатори. Стильове оформлення текстових елементів в html-документах.</p>" +
+                document.querySelector("main .container").innerHTML = "<p><span class='bold'>Тема: </span> Каскадні таблиці стилів. Селектори .ідентифікатори. Стильове оформлення текстових елементів в html-документах.</p>" +
                     "<p><span class='bold'>Завдання:</span>" +
                     "<ol><li> У програмному коді лабораторної работи №2 застосувати селектори тегу і класу на свій розуд. " +
                     "Вміти пояснити викладачу. Програмний код  даного пункту відобразити у звітному HTML-документі;</li>" +
@@ -176,7 +176,7 @@ function chooseInfo(button) {
                     "</ul></ol></p>";
                 break;
             case "lists":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .container").innerHTML = "<div class=\"elementImages\">" +
                     "                <div><img src=\"img/lab2/innerListsCode.png\" style='width: 600px' alt=\"\"></div>" +
                     "                <div><img src=\"img/lab2/css.png\" alt=\"\"></div>" +
                     "            </div>" +
@@ -188,7 +188,7 @@ function chooseInfo(button) {
                     "            </div>";
                 break;
             case "identifications":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .container").innerHTML = "<div class=\"elementImages\">" +
                     "<div> <img src=\"img/lab2/lab2_identificators.png\" alt=\"\"> </div>" +
                     "<div> <img src=\"img/lab2/lab2_ident_2.png\" alt=\"\"> </div>" +
                     "<div> <img src='img/lab2/idImg.png' alt=''/> </div>" +
@@ -202,7 +202,7 @@ function chooseInfo(button) {
                     "</div>";
                 break;
             case "indents":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .container").innerHTML = "<div class=\"elementImages\">" +
                     "<div> <img src=\"img/lab2/paddingCode.jpg\" alt=\"\"></div>" +
                     "<div> <img src=\"img/lab2/paddingImg.jpg\" style=\"width: 200px;\" alt=\"\"></div>" +
                     "<div> <img src='img/lab2/paddingHtml.png' alt=''/> </div></div>" +
@@ -211,7 +211,7 @@ function chooseInfo(button) {
                     "<p>Синтаксис padding: [значення | відтсотки] {1, 4} | inherit </p> <div/>";
                 break;
             case "floating_elements":
-                document.querySelector("main .content").innerHTML = "<div class='elementImages'>" +
+                document.querySelector("main .container").innerHTML = "<div class='elementImages'>" +
                     "<div> <img src='img/lab2/floatCode.png' alt=''></div>" +
                     "<div> <img src='img/lab2/floatingElement.png' alt=''/></div>" +
                     "<div> <img src='img/tableCode.png' alt=''/></div></div>" +
@@ -225,7 +225,7 @@ function chooseInfo(button) {
                     "<p><i>inherit</i> - успадковує значення предки. </p>";
                 break;
             case "selectorsByTagAndClass":
-                document.querySelector("main .content").innerHTML = "<p><b>1.Селектор тегу:</b></p>\n" +
+                document.querySelector("main .container").innerHTML = "<p><b>1.Селектор тегу:</b></p>\n" +
                     "<p>Селектор тегу іноді називається селектором імені типу або селектором елемента, оскільки він " +
                     "вибирає тег / елемент HTML у вашому документі. В прикладі ми використали тег header</p>\n" +
                     "<div class=\"elementImages\">" +
@@ -242,7 +242,7 @@ function chooseInfo(button) {
                     "</div>";
                 break;
             case "otherSelectors":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .container").innerHTML = "<div class=\"elementImages\">" +
                     "<div><img src=\"img/lab2/otherSelectorCode.jpg\" alt=\"\"></div></div>" +
                     "<div>" +
                     "<p>Універсальний селектор - Обирає всі елементи. За бажанням, він може бути обмежений певним" +
@@ -254,7 +254,7 @@ function chooseInfo(button) {
                     "<div/>";
                 break;
             case "groupSelectors":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .container").innerHTML = "<div class=\"elementImages\">" +
                     "<div> <img src='img/lab2/groupSelectorsHtml.png' alt=''/></div>" +
                     "<div><img src=\"img/lab2/selectors.png\" alt=\"\"></div>\n" +
                     "<div><img src=\"img/lab2/groupselectors.png\" alt=\"\"></div></div>" +

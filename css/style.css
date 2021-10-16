@@ -86,12 +86,12 @@ button.activeButton:hover {
     border: 3px solid #000;
 }
 
-.content {
+.container {
     border-radius: 0 0 10px 0;
     background: #ececec;
     width: 76%;
     min-height: 460px;
-    max-height: 63vh;
+    max-height: 60vh;
     border: 1px solid black;
     float: right;
     box-shadow: #393939 5px 5px 15px;
