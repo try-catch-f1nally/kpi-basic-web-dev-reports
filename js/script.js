@@ -29,9 +29,15 @@ function chooseLab(button) {
                 "<button id=\"otherSelectors\" onclick=\"chooseInfo(this)\"> Інші селектори</button>" +
                 "<button id=\"groupSelectors\" onclick=\"chooseInfo(this)\"> Групування селекторів</button>";
             break;
-        // case "lab3":
-        //     document.querySelector("main .infoButtons").innerHTML = "";
-        //     break;
+        case "lab3":
+            document.querySelector("main .infoButtons").innerHTML =
+                "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\"> Тема. Мета. Посилання на звіт та сайт</button>" +
+                "<button id=\"layout\" onclick=\"chooseInfo(this)\"> Зовнішній вигляд макету </button>" +
+                "<button id=\"code_of_layout\" onclick=\"chooseInfo(this)\"> HTML-код макету </button>" +
+                "<button id=\"table_layout\" onclick=\"chooseInfo(this)\">Розмітка сторінки за допомогою таблиці</button>" +
+                "<button id=\"float_layout\" onclick=\"chooseInfo(this)\"> Розмітка сторінки за допомогою плаваючих блоків </button>" +
+                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновки </button>";
+            break;
         // case "lab4":
         //     document.querySelector("main .infoButtons").innerHTML = "";
         //     break;
@@ -266,7 +272,13 @@ function chooseInfo(button) {
     }
     if (document.querySelector(".labButtons .activeButton").id === "lab3") {
         switch (button.id) {
-
+            case "theme":
+                document.querySelector("main .container").innerHTML =
+                    "<p><span class='bold'> Тема: </span> Блочна верстка HTML-документу за макетом.</p>" +
+                    "<p><span class='bold'> Мета: </span>придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок.</p><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/University_Web_Reports'>https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/Films4You'>https://github.com/GangstaProgrammer/Films4You - Сайт</a>";
+                break;
         }
     }
     // if (document.querySelector(".labButtons .activeButton").id === "lab3") {
