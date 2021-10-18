@@ -279,6 +279,193 @@ function chooseInfo(button) {
                     "<a href='https://github.com/GangstaProgrammer/University_Web_Reports'>https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
                     "<a href='https://github.com/GangstaProgrammer/Films4You'>https://github.com/GangstaProgrammer/Films4You - Сайт</a>";
                 break;
+            case "layout":
+                document.querySelector("main .container").innerHTML = "<div class=\"elementImages img \">" +
+                    "<div> <img src='img/lab3/lab3_layout1.png' style='width: 100%' alt=\"\"> </div>" +
+                    "<div> <img src=\"img/lab3/lab3_layout2.png\" style='width: 100%' alt=\"\"> </div>" +
+                    "</div>"
+                break;
+            case "code_of_layout":
+                document.querySelector("main .container").innerHTML =
+                    "<xmp><!doctype html>\n" +
+                    "<html lang=\"en\">\n" +
+                    "<head>\n" +
+                    "    <meta charset=\"UTF-8\">\n" +
+                    "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\n" +
+                    "    <title>Films4You</title>\n" +
+                    "    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n" +
+                    "    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n" +
+                    "    <link href=\"https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Azeret+Mono&family=Montserrat&display=swap\"\n" +
+                    "          rel=\"stylesheet\">\n" +
+                    "    <link rel=\"stylesheet\" href=\"css/reset.css\"/>\n" +
+                    "    <link rel=\"stylesheet\" href=\"css/style.css\"/>\n" +
+                    "</head>\n" +
+                    "<body>\n" +
+                    "<div class=\"cover\">\n" +
+                    "    <header>\n" +
+                    "        <div class=\"wrapper\">\n" +
+                    "            <div class=\"content\">\n" +
+                    "                <div class=\"logo\">\n" +
+                    "                    <a href=\"index.html\">\n" +
+                    "                        <span class=\"films\">Films</span><span class=\"four\">4</span><span class=\"you\">You</span>\n" +
+                    "                    </a>\n" +
+                    "                </div>\n" +
+                    "                <div class=\"menu_body\">\n" +
+                    "                    <form action=\"\" class=\"search_by_name\">\n" +
+                    "                        <input type=\"text\" placeholder=\"Пошук за назвою...\">\n" +
+                    "                        <button type=\"submit\"><img src=\"img/search_icon\" alt=\"\"></button>\n" +
+                    "                    </form>\n" +
+                    "                    <div class=\"advanced_search\"><a href=\"#\">Розширений пошук</a></div>\n" +
+                    "                    <div class=\"forms\">\n" +
+                    "                        <div class=\"sign_in\"><a href=\"#\"> Вхід </a></div>\n" +
+                    "                        <div class=\"sign_up\"><a href=\"#\"> Реєстрація </a></div>\n" +
+                    "                    </div>\n" +
+                    "                </div>\n" +
+                    "                <div class=\"menu_icon\"><span></span></div>\n" +
+                    "            </div>\n" +
+                    "        </div>\n" +
+                    "    </header>\n" +
+                    "\n" +
+                    "    <div class=\"wrapper\">\n" +
+                    "        <main>\n" +
+                    "            <div class=\"roundabout\">\n" +
+                    "                <div class=\"roundabout_title\">\n" +
+                    "                    <h2> Новинки </h2>\n" +
+                    "                    <a href=\"#\"> Показати всі</a>\n" +
+                    "                </div>\n" +
+                    "                <hr>\n" +
+                    "                <div class=\"films_row\">\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"#\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/black_widow.avif\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Вдова (2021)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"#\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/conjuring_3.webp\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\">Закляття 3 (2021)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"#\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/f9.webp\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Форсаж 9 (2021)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/don't_breathe_2.avif\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Не дихай 2 (2021)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/shang-chi_and_the_legend_of_ten_rings.avif\"\n" +
+                    "                                                     alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Шан-Чі та легенда десяти кілець (2021)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                </div>\n" +
+                    "                <hr>\n" +
+                    "            </div>\n" +
+                    "            <div class=\"roundabout\">\n" +
+                    "                <div class=\"roundabout_title\">\n" +
+                    "                    <h2> Найпопулярніші </h2>\n" +
+                    "                    <a href=\"#\"> Показати всі</a>\n" +
+                    "                </div>\n" +
+                    "                <hr>\n" +
+                    "                <div class=\"films_row\">\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"#\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/the_shawshank_redemption.avif\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Втеча з Шоушенка (1994)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"#\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/inception.avif\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Початок (2010)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/the_dark_knight.avif\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Темний лицар (2008)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/fight_club.avif\"\n" +
+                    "                                                     alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Бійцівський клуб (1999)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"#\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/forest_gump.avif\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Форрест Гамп (1994)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                </div>\n" +
+                    "                <hr>\n" +
+                    "            </div>\n" +
+                    "            <div class=\"roundabout\">\n" +
+                    "                <div class=\"roundabout_title\">\n" +
+                    "                    <h2> Незабаром у кіно </h2>\n" +
+                    "                    <a href=\"#\"> Показати всі</a>\n" +
+                    "                </div>\n" +
+                    "                <hr>\n" +
+                    "                <div class=\"films_row\">\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"#\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/halloween_kills.jpg\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Хеллоувін вбиває (2021)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"#\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/the_last_duel.jpg\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Остання дуель (2021)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"#\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/nebenan.jpg\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> По сусідству (2021)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/eternals.jpg\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Вічні (2021)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"announcement\">\n" +
+                    "                        <a href=\"\">\n" +
+                    "                            <div class=\"poster\"><img src=\"img/posters/spencer.jpg\" alt=\"\"></div>\n" +
+                    "                            <div class=\"film_name\"> Спенсер (2021)</div>\n" +
+                    "                        </a>\n" +
+                    "                    </div>\n" +
+                    "                </div>\n" +
+                    "                <hr>\n" +
+                    "            </div>\n" +
+                    "        </main>\n" +
+                    "    </div>\n" +
+                    "    <footer>\n" +
+                    "        <div class=\"wrapper\"> © 2021 Films4You</div>\n" +
+                    "    </footer>\n" +
+                    "</div>\n" +
+                    "<script src=\"js/script.js\"></script>\n" +
+                    "</body>\n" +
+                    "</html></xmp>";
+                break;
+            case "conclusions":
+                document.querySelector("main .container").innerHTML = "<p> Виконавши дану лабораторну роботу," +
+                    " ми придбали практичні навички роботи верстки сторінок засобами CSS, " +
+                    " верстки на основі плаваючих елементів та таблиць," +
+                    " з’ясували переваги та недоліки типів макетів веб-сторінок. </p>";
+                break;
         }
     }
     // if (document.querySelector(".labButtons .activeButton").id === "lab3") {
