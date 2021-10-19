@@ -13,6 +13,14 @@ li {
     padding: 5px 0;
 }
 
+a {
+    line-height: 30px;
+}
+
+.content a {
+    text-decoration: underline;
+}
+
 .dash {
     list-style-type: "-";
 }
@@ -33,10 +41,3 @@ li {
     display: flex;
 }
 
-a {
-    line-height: 30px;
-}
-
-.content a {
-    text-decoration: underline;
-}
