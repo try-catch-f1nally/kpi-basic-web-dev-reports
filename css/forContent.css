@@ -36,3 +36,7 @@ li {
 a {
     line-height: 30px;
 }
+
+.content a {
+    text-decoration: underline;
+}

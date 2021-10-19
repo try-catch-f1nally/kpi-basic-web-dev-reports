@@ -86,7 +86,7 @@ button.activeButton:hover {
     border: 3px solid #000;
 }
 
-.container {
+.content {
     border-radius: 0 0 10px 0;
     background: #ececec;
     width: 76%;
