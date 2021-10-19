@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Var3 Table</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 4px solid #000;
+            width: 60%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .first {
+            border: 4px solid #000000;
+            background: #fff100;
+            height: 15%;
+        }
+
+        .content_first {
+            border: 4px solid #000;
+            width: 40%;
+            height: 60px;
+            background: #fff;
+            margin: 20px;
+        }
+
+        .second {
+            border: 4px solid #000000;
+            background: #19109d;
+            width: 25%;
+        }
+
+        .paddings_third {
+            width: 33.33%;
+            padding: 50px 20px 20px 10px;
+        }
+
+        .third {
+            border: 4px solid #808080;
+            height: 100%;
+            position: relative;
+        }
+
+        .content_third {
+            border: 4px solid #000000;
+            height: 100px;
+            width: 100%;
+            background: red;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .paddings_fourth {
+            width: 33.33%;
+            padding: 50px 20px 20px 10px;
+        }
+
+        .fourth {
+            border: 4px solid #000000;
+            background: #19109d;
+            height: 100%;
+        }
+
+        .fifth {
+            border: 4px solid #000000;
+            background: #fff100;
+            height: 15%;
+        }
+
+        .sixth {
+            border: 4px solid #000000;
+            height: 65px;
+            width: 650px;
+            background: red;
+            position: absolute;
+
+        }
+        .paddings_sixth {
+            width: 40%;
+            padding: 10px 10px 20px 10px;
+        }
+        .tr1{
+            height: 2%;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr class="first">
+        <td colspan="3">
+            <div class="content_first"></div>
+        </td>
+    </tr>
+    <tr class="tr1">
+        <td class="second" rowspan="2"></td>
+        <td class="paddings_sixth">
+            <div class="sixth"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="paddings_third">
+            <div class="third">
+                <div class="content_third"></div>
+            </div>
+        </td>
+        <td class="paddings_fourth">
+            <div class="fourth"></div>
+        </td>
+    </tr>
+    <tr class="fifth">
+        <td colspan="3"></td>
+    </tr>
+
+</table>
+</body>
+</html>
