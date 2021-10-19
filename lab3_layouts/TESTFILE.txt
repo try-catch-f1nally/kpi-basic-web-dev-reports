@@ -1,4 +1,0 @@
-TESTER FILEп
-checkout andrew
-
-new brach andrew_test
