@@ -32,3 +32,11 @@ li {
 .structure {
     display: flex;
 }
+
+a {
+    line-height: 30px;
+}
+
+.content a {
+    text-decoration: underline;
+}
