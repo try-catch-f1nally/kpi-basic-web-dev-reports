@@ -276,9 +276,12 @@ function chooseInfo(button) {
                 document.querySelector("main .content").innerHTML =
                     "<p><span class='bold'> Тема: </span> Блочна верстка HTML-документу за макетом.</p>" +
                     "<p><span class='bold'> Мета: </span>придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок.</p><br>" +
-                    "<a href='https://github.com/GangstaProgrammer/University_Web_Reports'>https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
-                    "<a href='https://github.com/GangstaProgrammer/Films4You'>https://github.com/GangstaProgrammer/Films4You - Сайт</a><br>" +
-                    "<a href='https://gangstaprogrammer.github.io/Films4You/'>https://gangstaprogrammer.github.io/Films4You/ - Сайт(github page)</a>";
+                    "<a href='https://github.com/GangstaProgrammer/University_Web_Reports' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/Films4You' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/Films4You - Сайт</a><br>" +
+                    "<a href='https://gangstaprogrammer.github.io/Films4You/' target='_blank'>" +
+                    "https://gangstaprogrammer.github.io/Films4You/ - Сайт(github page)</a>";
                 break;
             case "layout":
                 document.querySelector("main .content").innerHTML = "<div class=\"elementImages img \">" +
@@ -464,19 +467,19 @@ function chooseInfo(button) {
             case "table_layout":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab3_layouts/3_table.html'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab3_layouts/4_table.html'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab3_layouts/6_table.html'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab3_layouts/7_table.html'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='../lab3_layouts/3_table.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='../lab3_layouts/4_table.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='../lab3_layouts/6_table.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab3_layouts/7_table.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "float_layout":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab3_layouts/3_float.html'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab3_layouts/4_float.html'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab3_layouts/6_float.html'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab3_layouts/7_float.html'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='../lab3_layouts/3_float.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='../lab3_layouts/4_float.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='../lab3_layouts/6_float.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab3_layouts/7_float.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "conclusions":
