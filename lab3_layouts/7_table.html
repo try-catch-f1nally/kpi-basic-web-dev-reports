@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7_Table</title>
+
+    <style>
+        * {
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .first {
+            background: #fff;
+            width: 10%;
+            height: 100px;
+        }
+
+        .second {
+            background: #3366ff;
+            width: 15%;
+            height: 20px;
+        }
+
+        .third {
+            background: #ffcc00;
+            width: 15%;
+            height: 100px;
+        }
+
+        .fourth {
+            background: #fff;
+            width: 40%;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td class="first" rowspan="3"></td>
+        <td class="second" colspan="3"></td>
+        <td class="first" rowspan="3"></td>
+    </tr>
+    <tr>
+        <td class="third"></td>
+        <td class="fourth"></td>
+        <td class="third"></td>
+    </tr>
+    <tr>
+        <td class="second" colspan="3"></td>
+    </tr>
+</table>
+
+</body>
+</html>
