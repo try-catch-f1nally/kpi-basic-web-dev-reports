@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Гистограмма</title>
+    <script src="https://www.google.com/jsapi"></script>
+    <script>
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Дата', 'Захворюваність', 'Смертність'],
+                ['25.10', 14634, 330],
+                ['26.10', 19120, 734],
+                ['27.10', 22574, 692]
+            ]);
+            var options = {
+                title: 'Covid-19 Ukraine',
+                hAxis: {title: 'Дата'},
+                vAxis: {title: 'Кількість'}
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById('oil'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+<div id="oil" style="width: 1280px; height: 700px;"></div>
+</body>
+</html>

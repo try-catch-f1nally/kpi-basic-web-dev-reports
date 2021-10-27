@@ -38,9 +38,16 @@ function chooseLab(button) {
                 "<button id=\"float_layout\" onclick=\"chooseInfo(this)\"> Розмітка сторінки за допомогою плаваючих блоків </button>" +
                 "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновки </button>";
             break;
-        // case "lab4":
-        //     document.querySelector("main .infoButtons").innerHTML = "";
-        //     break;
+        case "lab4":
+            document.querySelector("main .infoButtons").innerHTML =
+                "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\"> Постановка задачі ЛР №4</button>" +
+                "<button id=\"url_scheme\" onclick=\"chooseInfo(this)\"> Схема URL </button>" +
+                "<button id=\"handler\" onclick=\"chooseInfo(this)\"> Обробник подій </button>" +
+                "<button id=\"insert_script\" onclick=\"chooseInfo(this)\"> Вставка тегу SCRIPT</button>" +
+                "<button id=\"task4\" onclick=\"chooseInfo(this)\"> Завдання 4 (масиви)</button>" +
+                "<button id=\"task6\" onclick=\"chooseInfo(this)\"> Завдання 6 </button>" +
+                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
+            break;
         // case "lab5":
         //     document.querySelector("main .infoButtons").innerHTML = "";
         //     break;
@@ -490,11 +497,77 @@ function chooseInfo(button) {
                 break;
         }
     }
-    // if (document.querySelector(".labButtons .activeButton").id === "lab4") {
-    //     switch (button.id) {
-    //
-    //     }
-    // }
+    if (document.querySelector(".labButtons .activeButton").id === "lab4") {
+        switch (button.id) {
+            case "theme":
+                document.querySelector("main .content").innerHTML =
+                    "<p><span class='bold'> Тема: </span> Функціональне застосування javascript у HTML-документі. Класи, об’єкти, функції, в мові javascript. Події та обробка подій. Програмна взаємодія з HTML документами на основі DOM API .</p>" +
+                    "<p><span class='bold'> Мета: </span> придбати практичні навички роботи маніпулювання інформаційним вмістом Web-документа засобами мови Javasсript, використання об’єктів, масивів, функцій, подій, обробників подій у сценаріях на мові JavaScript</p><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/University_Web_Reports' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/Films4You' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/Films4You - Сайт</a><br>" +
+                    "<a href='https://gangstaprogrammer.github.io/Films4You/' target='_blank'>" +
+                    "https://gangstaprogrammer.github.io/Films4You/ - Сайт(github page)</a>";
+                break;
+            case "url_scheme":
+                document.querySelector("main .content").innerHTML =
+                    "<div class=\"elementImages img \">" +
+                    "<div> <img src='img/lab4/url_scheme_html.png' alt=\"\"> </div>" +
+                    "<div> <img src=\"img/lab4/url_scheme_view.png\" alt=\"\"> </div>" +
+                    "</div>";
+                break;
+            case "handler":
+                document.querySelector("main .content").innerHTML =
+                    "<div class=\"elementImages img \">" +
+                    "<div> <img src='img/lab4/handler_js.png' style='width: 700px' alt=\"\"> </div>" +
+                    "<div> <img src=\"img/lab4/handler_view1.png\" style='width: 300px' alt=\"\"> </div>" +
+                    "<div> <img src=\"img/lab4/handler_view2.png\" style='width: 300px' alt=\"\"> </div>" +
+                    "</div>";
+                break;
+            case "insert_script":
+                document.querySelector("main .content").innerHTML =
+                    "<div class=\"elementImages img \">" +
+                    "<div> <img src='img/lab4/tag_script_html.png' alt=\"\"> </div>" +
+                    "<div> <img src=\"img/lab4/tag_script_js.png\" alt=\"\"> </div>" +
+                    "</div>";
+                break;
+            case "task4":
+                document.querySelector("main .content").innerHTML =
+                    "<ol>" +
+                    "<li> <a href='../lab4_tasks/var3/3_task4.js' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<div class='element_images'>" +
+                    "<div><img src='../../img/lab4/3_task4_code.png' width='650px' alt=''></div></div>" +
+                    "<div><img src='../../img/lab4/3_task4_result.png' width='400px' alt=''></div></div></li>" +
+                    "<li> <a href='../lab4_tasks/var4/4_task4.js' target='_blank'> Варіант 4 - Нікіта</a>" +
+                    "<div class='element_images'>" +
+                    "<div><img src='../../img/lab4/4_task4_code.png' width='650px' alt=''></div></div>" +
+                    "<div><img src='../../img/lab4/4_task4_result.png' width='400px' alt=''></div></div></li>" +
+                    "<li> <a href='../lab4_tasks/var6/6_task4.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab4_tasks/var7/7_task4.js' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<div class='element_images'>" +
+                    "<div><img src='../../img/lab4/7_task4_code1.jpg' width='650px' alt=''></div></div>" +
+                    "<div><img src='../../img/lab4/7_task4_code2.jpg' width='650px' alt=''></div></div>" +
+                    "<div><img src='../../img/lab4/7_task4_result.jpg' width='650px' alt=''></div></div></li>" +
+                    "</ol>";
+                break;
+            case "task6":
+                document.querySelector("main .content").innerHTML =
+                    "<ol>" +
+                    "<li> <a href='../lab4_tasks/var3/3_task6.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='../lab4_tasks/var4/4_task6.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='../lab4_tasks/var6/6_task6.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab4_tasks/var7/7_task6.html' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "</ol>";
+                break;
+            case "conclusions":
+                document.querySelector("main .content").innerHTML =
+                    "Виконавши цю лабораторну роботу, ми придбали практичні навички роботи маніпулювання інформаційним " +
+                    "вмістом Web-документа засобами мови Javasсript, використовували об’єкти, масиви, функції, події, " +
+                    "обробники подій у сценаріях на мові JavaScript";
+                break;
+        }
+    }
     // if (document.querySelector(".labButtons .activeButton").id === "lab5") {
     //     switch (button.id) {
     //
