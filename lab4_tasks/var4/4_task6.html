@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Текстовий редактор</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="4_task6.css">
+</head>
+<body>
+<div class="controls">
+    <div class="input">
+        <textarea id="input_text" placeholder="Увведіть текст для форматування" name="input_text" form="input"></textarea>
+    </div>
+    <div class="properties">
+        <h2>Оберіть властивості:</h2>
+        <form action="4_task6.html" id="input">
+            <div class="checkboxes">
+                <input type="checkbox" id="bold" name="bold"> <label for="bold"> Жирний </label> <br>
+                <input type="checkbox" id="italic" name="italic"> <label for="italic"> Курсив </label> <br>
+                <input type="checkbox" id="underline" name="underline"> <label for="underline"> Підкреслювання </label> <br>
+            </div>
+            <div class="radios">
+                <input type="radio" id="uppercase" name="case" value="upper"> <label for="uppercase"> Великий регістр </label> <br>
+                <input type="radio" id="lowercase" name="case" value="lower"> <label for="lowercase"> Малий регістр </label> <br>
+            </div>
+            <div class="choose_color">
+                <label for="color"> Оберіть колір тексту: </label>
+                <input type="color" id="color" name="color">
+            </div>
+            <button type="submit"> Форматувати </button>
+        </form>
+    </div>
+</div>
+<div class="result">
+</div>
+<script src="4_task6.js"></script>
+</body>
+</html>
