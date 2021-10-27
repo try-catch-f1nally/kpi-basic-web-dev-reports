@@ -112,9 +112,9 @@ function chooseInfo(button) {
             case "structure":
                 document.querySelector("main .content").innerHTML = "<div class=\"structure\">" +
                     "                <div><img src=\"img/lab1/structure.png\" alt=\"\"></div>" +
-                    "                <div><p><i>index.html</i> - базовий HTML-документ </p>" +
+                    "                <div><p><i>6_task4.html</i> - базовий HTML-документ </p>" +
                     "                    <p><i>temp.html</i> - HTML-документ з таблицею та формою</p>" +
-                    "                    <p><i>style.css</i> - базовий css </p>" +
+                    "                    <p><i>6_task4.css</i> - базовий css </p>" +
                     "                    <p><i>reset.css</i> - css, що обнуляє стилі, які за замовчуванням задані браузерами </p>" +
                     "                </div>" +
                     "            </div>";
@@ -302,7 +302,7 @@ function chooseInfo(button) {
                     "    <link href=\"https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Azeret+Mono&family=Montserrat&display=swap\"\n" +
                     "          rel=\"stylesheet\">\n" +
                     "    <link rel=\"stylesheet\" href=\"css/reset.css\"/>\n" +
-                    "    <link rel=\"stylesheet\" href=\"css/style.css\"/>\n" +
+                    "    <link rel=\"stylesheet\" href=\"css/6_task4.css\"/>\n" +
                     "</head>\n" +
                     "<body>\n" +
                     "<div class=\"cover\">\n" +
@@ -310,7 +310,7 @@ function chooseInfo(button) {
                     "        <div class=\"wrapper\">\n" +
                     "            <div class=\"content\">\n" +
                     "                <div class=\"logo\">\n" +
-                    "                    <a href=\"index.html\">\n" +
+                    "                    <a href=\"6_task4.html\">\n" +
                     "                        <span class=\"films\">Films</span><span class=\"four\">4</span><span class=\"you\">You</span>\n" +
                     "                    </a>\n" +
                     "                </div>\n" +
@@ -460,7 +460,7 @@ function chooseInfo(button) {
                     "        <div class=\"wrapper\"> © 2021 Films4You</div>\n" +
                     "    </footer>\n" +
                     "</div>\n" +
-                    "<script src=\"js/script.js\"></script>\n" +
+                    "<script src=\"js/6_task4.js\"></script>\n" +
                     "</body>\n" +
                     "</html></xmp>";
                 break;
@@ -483,23 +483,10 @@ function chooseInfo(button) {
                     "</ol>";
                 break;
             case "conclusions":
-                document.querySelector("main .content").innerHTML = "<p> Виконавши дану лабораторну роботу, " +
-                    "ми придбали практичні навички роботи верстки сторінок засобами CSS, " +
-                    "верстки на основі плаваючих елементів та таблиць, " +
-                    "з’ясували переваги та недоліки типів макетів веб-сторінок. </p>" +
-                    "<p> <b>Таблична верстка:</b> <br> " +
-                    "+Таблиці не перекриваються один з одним при маленьких розширеннях. <br>" +
-                    "+Легко робити кросбраузерний дизайн. <br>" +
-                    "+Набагато простіше блочної верстки. <br>" +
-                    "-Дуже багато зайвого коду, з огляду нескінченного створення рядків і стовпців. <br>" +
-                    "-Далеко не кожен дизайн можна створити за допомогою таблиць. <br> </p>" +
-                    "<p> <b> Верстка за допомогою плаваючих елементів</b> <br>" +
-                    "+Значно менше HTML-коду і, як наслідок, зменшення ваги сторінки. <br>" +
-                    "+Блоки завантажуються швидше таблиць (особливо великих таблиць). <br>" +
-                    "+На відміну від таблиць, блоки - універсальний засіб для створення будь-якого дизайну. <br>" +
-                    "-Набагато складніше табличної верстки. <br>" +
-                    "-Величезні проблеми з кросбраузерністю. <br>" +
-                    "-Блоки починають наїжджати (або спадати) один на одного при маленьких розширеннях екрану.</p>";
+                document.querySelector("main .content").innerHTML = "<p> Виконавши дану лабораторну роботу," +
+                    " ми придбали практичні навички роботи верстки сторінок засобами CSS, " +
+                    " верстки на основі плаваючих елементів та таблиць," +
+                    " з’ясували переваги та недоліки типів макетів веб-сторінок. </p>";
                 break;
         }
     }
