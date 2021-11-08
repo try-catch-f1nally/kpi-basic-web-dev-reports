@@ -474,19 +474,19 @@ function chooseInfo(button) {
             case "table_layout":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab3_layouts/3_table.html' target='_blank'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab3_layouts/4_table.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab3_layouts/6_table.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab3_layouts/7_table.html' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='../lab3/3_table.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='../lab3/4_table.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='../lab3/6_table.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab3/7_table.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "float_layout":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab3_layouts/3_float.html' target='_blank'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab3_layouts/4_float.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab3_layouts/6_float.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab3_layouts/7_float.html' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='../lab3/3_float.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='../lab3/4_float.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='../lab3/6_float.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab3/7_float.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "conclusions":
@@ -535,16 +535,16 @@ function chooseInfo(button) {
             case "task4":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab4_tasks/var3/3_task4.js' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='../lab4/var3/3_task4.js' target='_blank'> Варіант 3 - Діана</a></li>" +
                     "<div class='element_images'>" +
                     "<div><img src='../../img/lab4/3_task4_code.png' width='650px' alt=''></div></div>" +
                     "<div><img src='../../img/lab4/3_task4_result.png' width='400px' alt=''></div></div></li>" +
-                    "<li> <a href='../lab4_tasks/var4/4_task4.js' target='_blank'> Варіант 4 - Нікіта</a>" +
+                    "<li> <a href='../lab4/var4/4_task4.js' target='_blank'> Варіант 4 - Нікіта</a>" +
                     "<div class='element_images'>" +
                     "<div><img src='../../img/lab4/4_task4_code.png' width='650px' alt=''></div></div>" +
                     "<div><img src='../../img/lab4/4_task4_result.png' width='400px' alt=''></div></div></li>" +
-                    "<li> <a href='../lab4_tasks/var6/6_task4.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab4_tasks/var7/7_task4.js' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='../lab4/var6/6_task4.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab4/var7/7_task4.js' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "<div class='element_images'>" +
                     "<div><img src='../../img/lab4/7_task4_code1.jpg' width='650px' alt=''></div></div>" +
                     "<div><img src='../../img/lab4/7_task4_code2.jpg' width='650px' alt=''></div></div>" +
@@ -554,10 +554,10 @@ function chooseInfo(button) {
             case "task6":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab4_tasks/var3/3_task6.html' target='_blank'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab4_tasks/var4/4_task6.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab4_tasks/var6/6_task6.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab4_tasks/var7/7_task6.html' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='../lab4/var3/3_task6.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='../lab4/var4/4_task6.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='../lab4/var6/6_task6.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab4/var7/7_task6.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "conclusions":
