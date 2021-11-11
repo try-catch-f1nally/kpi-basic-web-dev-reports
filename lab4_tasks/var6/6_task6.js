@@ -1,9 +1,4 @@
-/*
-xCal datepicker version 1.8
-Alex Fadeev elderfadeev(a)gmail.com
-Free to use under mit licence
-http://cssworld.ru/en/datepicker/
-*/
+
 ;(function () {
     var lang = { // lang[a.lang].x
         "en": {
