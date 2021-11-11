@@ -5,7 +5,7 @@ function chooseLab(button) {
     } else {
         document.querySelector("main .content").classList.remove("unActive");
     }
-    const chosenBtn = document.querySelector(`#${button.id}`);
+    const chosenBtn = document.getElementById(button.id);
     chosenBtn.className = "activeButton";
     switch (chosenBtn.id) {
         case "lab1":
@@ -48,9 +48,17 @@ function chooseLab(button) {
                 "<button id=\"task6\" onclick=\"chooseInfo(this)\"> Завдання 6 </button>" +
                 "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
             break;
-        // case "lab5":
-        //     document.querySelector("main .infoButtons").innerHTML = "";
-        //     break;
+        case "lab5":
+            document.querySelector("main .infoButtons").innerHTML =
+            "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\"> Постановка задачі ЛР №5</button>" +
+            "<button id=\"dynamic_elements\" onclick=\"chooseInfo(this)\"> Динамічні елементи </button>" +
+            "<button id=\"photogallery\" onclick=\"chooseInfo(this)\"> Фотогалерея </button>" +
+            "<button id=\"photoslider\" onclick=\"chooseInfo(this)\"> Слайдер фотографій </button>" +
+            "<button id=\"videoslider\" onclick=\"chooseInfo(this)\"> Слайдер відеоматеріалів </button>" +
+            "<button id=\"social_network_icons\" onclick=\"chooseInfo(this)\"> Кнопки соціальних мереж </button>" +
+            "<button id=\"informers\" onclick=\"chooseInfo(this)\"> Інформери </button>" +
+            "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
+            break;
         // case "lab6":
         //     document.querySelector("main .infoButtons").innerHTML = "";
         //     break;
@@ -107,14 +115,13 @@ function chooseInfo(button) {
                 break;
             case "topic":
                 document.querySelector("main .content").innerHTML =
-                    "<p><span class='bold'> Тема: </span> структура HTML-документа. Вибір предметної галузі. Робота з" +
+                    "<p><b> Тема: </b> структура HTML-документа. Вибір предметної галузі. Робота з" +
                     " посиланнями, таблицями, зображеннями, формами в HTML-документі.</p>" +
-                    "<p><span class='bold'> Мета: </span> придбати практичні навички роботи  з HTML-документом, " +
+                    "<p><b> Мета: </b> придбати практичні навички роботи  з HTML-документом, " +
                     "таблицями, формами, зображеннями, посиланнями. Створити шаблон звітного HTML-документом для " +
                     "відображення результатів роботи всіх лабораторних робіт.</p>" +
-                    "<p><span class='bold'> Посилання на ЛР: " +
-                    "<a href='https://gangstaprogrammer.github.io/Films4You/'>https://gangstaprogrammer.github.io/Films4You/</a>" +
-                    "</span></p>";
+                    "<p><b> Посилання на ЛР: </b>" +
+                    "<a href='https://gangstaprogrammer.github.io/Films4You/'>https://gangstaprogrammer.github.io/Films4You/</a></p>";
                 break;
             case "structure":
                 document.querySelector("main .content").innerHTML = "<div class=\"structure\">" +
@@ -171,8 +178,8 @@ function chooseInfo(button) {
     if (document.querySelector(".labButtons .activeButton").id === "lab2") {
         switch (button.id) {
             case "about":
-                document.querySelector("main .content").innerHTML = "<p><span class='bold'>Тема: </span> Каскадні таблиці стилів. Селектори .ідентифікатори. Стильове оформлення текстових елементів в html-документах.</p>" +
-                    "<p><span class='bold'>Завдання:</span>" +
+                document.querySelector("main .content").innerHTML = "<p><b'>Тема: </b> Каскадні таблиці стилів. Селектори .ідентифікатори. Стильове оформлення текстових елементів в html-документах.</p>" +
+                    "<p><b>Завдання:</b>" +
                     "<ol><li> У програмному коді лабораторної работи №2 застосувати селектори тегу і класу на свій розуд. " +
                     "Вміти пояснити викладачу. Програмний код  даного пункту відобразити у звітному HTML-документі;</li>" +
                     "<li>У програмному коду лабораторної роботи №2  застосувати ідентифікатори. Вміти пояснити викладачу. " +
@@ -189,7 +196,8 @@ function chooseInfo(button) {
                     "</ul></ol></p>";
                 break;
             case "lists":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .content").innerHTML =
+                    "            <div class=\"elementImages\">" +
                     "                <div><img src=\"img/lab2/innerListsCode.png\" style='width: 600px' alt=\"\"></div>" +
                     "                <div><img src=\"img/lab2/css.png\" alt=\"\"></div>" +
                     "            </div>" +
@@ -201,7 +209,8 @@ function chooseInfo(button) {
                     "            </div>";
                 break;
             case "identifications":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .content").innerHTML =
+                    "<div class=\"elementImages\">" +
                     "<div> <img src=\"img/lab2/lab2_identificators.png\" alt=\"\"> </div>" +
                     "<div> <img src=\"img/lab2/lab2_ident_2.png\" alt=\"\"> </div>" +
                     "<div> <img src='img/lab2/idImg.png' alt=''/> </div>" +
@@ -281,8 +290,8 @@ function chooseInfo(button) {
         switch (button.id) {
             case "theme":
                 document.querySelector("main .content").innerHTML =
-                    "<p><span class='bold'> Тема: </span> Блочна верстка HTML-документу за макетом.</p>" +
-                    "<p><span class='bold'> Мета: </span>придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок.</p><br>" +
+                    "<p><b> Тема: </b> Блочна верстка HTML-документу за макетом.</p>" +
+                    "<p><b> Мета: </b>придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок.</p><br>" +
                     "<a href='https://github.com/GangstaProgrammer/University_Web_Reports' target='_blank'>" +
                     "https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
                     "<a href='https://github.com/GangstaProgrammer/Films4You' target='_blank'>" +
@@ -291,7 +300,8 @@ function chooseInfo(button) {
                     "https://gangstaprogrammer.github.io/Films4You/ - Сайт(github page)</a>";
                 break;
             case "layout":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages img \">" +
+                document.querySelector("main .content").innerHTML =
+                    "<div class=\"elementImages img \">" +
                     "<div> <img src='img/lab3/lab3_layout1.png' style='width: 100%' alt=\"\"> </div>" +
                     "<div> <img src=\"img/lab3/lab3_layout2.png\" style='width: 100%' alt=\"\"> </div>" +
                     "</div>"
@@ -474,19 +484,19 @@ function chooseInfo(button) {
             case "table_layout":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab3_layouts/3_table.html' target='_blank'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab3_layouts/4_table.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab3_layouts/6_table.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab3_layouts/7_table.html' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='../lab3/3_table.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='../lab3/4_table.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='../lab3/6_table.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab3/7_table.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "float_layout":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab3_layouts/3_float.html' target='_blank'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab3_layouts/4_float.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab3_layouts/6_float.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab3_layouts/7_float.html' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='../lab3/3_float.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='../lab3/4_float.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='../lab3/6_float.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab3/7_float.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "conclusions":
@@ -501,8 +511,8 @@ function chooseInfo(button) {
         switch (button.id) {
             case "theme":
                 document.querySelector("main .content").innerHTML =
-                    "<p><span class='bold'> Тема: </span> Функціональне застосування javascript у HTML-документі. Класи, об’єкти, функції, в мові javascript. Події та обробка подій. Програмна взаємодія з HTML документами на основі DOM API .</p>" +
-                    "<p><span class='bold'> Мета: </span> придбати практичні навички роботи маніпулювання інформаційним вмістом Web-документа засобами мови Javasсript, використання об’єктів, масивів, функцій, подій, обробників подій у сценаріях на мові JavaScript</p><br>" +
+                    "<p><b> Тема: </b> Функціональне застосування javascript у HTML-документі. Класи, об’єкти, функції, в мові javascript. Події та обробка подій. Програмна взаємодія з HTML документами на основі DOM API .</p>" +
+                    "<p><b> Мета: </b> придбати практичні навички роботи маніпулювання інформаційним вмістом Web-документа засобами мови Javasсript, використання об’єктів, масивів, функцій, подій, обробників подій у сценаріях на мові JavaScript</p><br>" +
                     "<a href='https://github.com/GangstaProgrammer/University_Web_Reports' target='_blank'>" +
                     "https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
                     "<a href='https://github.com/GangstaProgrammer/Films4You' target='_blank'>" +
@@ -512,14 +522,14 @@ function chooseInfo(button) {
                 break;
             case "url_scheme":
                 document.querySelector("main .content").innerHTML =
-                    "<div class=\"elementImages img \">" +
+                    "<div class=\"elementImages\">" +
                     "<div> <img src='img/lab4/url_scheme_html.png' alt=\"\"> </div>" +
                     "<div> <img src=\"img/lab4/url_scheme_view.png\" alt=\"\"> </div>" +
                     "</div>";
                 break;
             case "handler":
                 document.querySelector("main .content").innerHTML =
-                    "<div class=\"elementImages img \">" +
+                    "<div class=\"elementImages\">" +
                     "<div> <img src='img/lab4/handler_js.png' style='width: 700px' alt=\"\"> </div>" +
                     "<div> <img src=\"img/lab4/handler_view1.png\" style='width: 300px' alt=\"\"> </div>" +
                     "<div> <img src=\"img/lab4/handler_view2.png\" style='width: 300px' alt=\"\"> </div>" +
@@ -527,7 +537,7 @@ function chooseInfo(button) {
                 break;
             case "insert_script":
                 document.querySelector("main .content").innerHTML =
-                    "<div class=\"elementImages img \">" +
+                    "<div class=\"elementImages\">" +
                     "<div> <img src='img/lab4/tag_script_html.png' alt=\"\"> </div>" +
                     "<div> <img src=\"img/lab4/tag_script_js.png\" alt=\"\"> </div>" +
                     "</div>";
@@ -535,17 +545,17 @@ function chooseInfo(button) {
             case "task4":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab4_tasks/var3/3_task4.js' target='_blank'> Варіант 3 - Діана</a></li>" +
-                    "<div class='element_images'>" +
+                    "<li> <a href='../lab4/var3/3_task4.js' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<div class='elementImages'>" +
                     "<div><img src='../../img/lab4/3_task4_code.png' width='650px' alt=''></div></div>" +
                     "<div><img src='../../img/lab4/3_task4_result.png' width='400px' alt=''></div></div></li>" +
-                    "<li> <a href='../lab4_tasks/var4/4_task4.js' target='_blank'> Варіант 4 - Нікіта</a>" +
-                    "<div class='element_images'>" +
+                    "<li> <a href='../lab4/var4/4_task4.js' target='_blank'> Варіант 4 - Нікіта</a>" +
+                    "<div class='elementImages'>" +
                     "<div><img src='../../img/lab4/4_task4_code.png' width='650px' alt=''></div></div>" +
                     "<div><img src='../../img/lab4/4_task4_result.png' width='400px' alt=''></div></div></li>" +
-                    "<li> <a href='../lab4_tasks/var6/6_task4.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab4_tasks/var7/7_task4.js' target='_blank'> Варіант 7 - Саша</a></li>" +
-                    "<div class='element_images'>" +
+                    "<li> <a href='../lab4/var6/6_task4.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab4/var7/7_task4.js' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<div class='elementImages'>" +
                     "<div><img src='../../img/lab4/7_task4_code1.jpg' width='650px' alt=''></div></div>" +
                     "<div><img src='../../img/lab4/7_task4_code2.jpg' width='650px' alt=''></div></div>" +
                     "<div><img src='../../img/lab4/7_task4_result.jpg' width='650px' alt=''></div></div></li>" +
@@ -554,10 +564,10 @@ function chooseInfo(button) {
             case "task6":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab4_tasks/var3/3_task6.html' target='_blank'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab4_tasks/var4/4_task6.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab4_tasks/var6/6_task6.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab4_tasks/var7/7_task6.html' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='../lab4/var3/3_task6.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='../lab4/var4/4_task6.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='../lab4/var6/6_task6.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='../lab4/var7/7_task6.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "conclusions":
@@ -568,11 +578,80 @@ function chooseInfo(button) {
                 break;
         }
     }
-    // if (document.querySelector(".labButtons .activeButton").id === "lab5") {
-    //     switch (button.id) {
-    //
-    //     }
-    // }
+    if (document.querySelector(".labButtons .activeButton").id === "lab5") {
+        switch (button.id) {
+            case "theme":
+                document.querySelector("main .content").innerHTML =
+                    "<p><b> Тема: </b> використання в сценаріях javascript бібліотек крос-браузерних інтерфейсів " +
+                    "методів DOM. Бібліотека jQuery UI. Засоби налагодження і тестування сценаріїв javascript.</p>" +
+                    "<p><b> Мета: </b> придбати практичні навички роботи jQuery UI, вміти додавати до сайту динамічні " +
+                    "елементи цієї бібліотеки, плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.</p><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/University_Web_Reports' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/Films4You' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/Films4You - Сайт</a><br>" +
+                    "<a href='https://gangstaprogrammer.github.io/Films4You/' target='_blank'>" +
+                    "https://gangstaprogrammer.github.io/Films4You/ - Сайт(github page)</a>";
+                break;
+            case "dynamic_elements":
+                document.querySelector("main .content").innerHTML =
+                    "<p>Підключення потрібних бібліотек: </p>" +
+                    "<div class='elementImages'> " +
+                    "   <div><img src='../img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
+                    "   <div><img src='../img/lab5/dynmaic_elements_scripts.png' width='400' alt=''></div> " +
+                    "</div><br>" +
+                    "<a href='../lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з динамічними елементами</a>";
+                break;
+            case "photogallery":
+                document.querySelector("main .content").innerHTML =
+                    "<p>Підключення потрібних бібліотек: </p>" +
+                    "<div class='elementImages'> " +
+                    "   <div><img src='../img/lab5/adding_unitegallery_html.png' width='1000' alt=''></div> " +
+                    "   <div><img src='../img/lab5/photogallery_script.png' alt=''></div> " +
+                    "</div><br>" +
+                    "<a href='../lab5/photogallery.html' target='_blank'>Сторінка з фотогалереєю</a>";
+                break;
+            case "photoslider":
+                document.querySelector("main .content").innerHTML =
+                    "<p>Підключення потрібних бібліотек: </p>" +
+                    "<div class='elementImages'> " +
+                    "   <div><img src='../img/lab5/photoslider_html.png' width='1000' alt=''></div> " +
+                    "   <div><img src='../img/lab5/photoslider_script.png' alt=''></div> " +
+                    "</div><br>" +
+                    "<a href='../lab5/photoslider.html' target='_blank'>Сторінка з фотослайдером</a>";
+                break;
+            case "videoslider":
+                document.querySelector("main .content").innerHTML =
+                    "<p>Підключення потрібних бібліотек: </p>" +
+                    "<div class='elementImages'> " +
+                    "   <div><img src='../img/lab5/videoslider_html.png' width='1000' alt=''></div> " +
+                    "   <div><img src='../img/lab5/videoslider_script.png' alt=''></div> " +
+                    "</div><br>" +
+                    "<a href='../lab5/videoslider.html' target='_blank'>Сторінка з відеослайдером</a>";
+                break;
+            case "social_network_icons":
+                document.querySelector("main .content").innerHTML =
+                    "<p>Підключення потрібних бібліотек: </p>" +
+                    "<div class='elementImages'> " +
+                    "   <div><img src='../img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
+                    "</div><br>" +
+                    "<a href='../lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з іконками соціальних мереж</a>";
+                break;
+            case "informers":
+                document.querySelector("main .content").innerHTML =
+                    "<p>Підключення потрібних бібліотек: </p>" +
+                    "<div class='elementImages'> " +
+                    "   <div><img src='../img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
+                    "</div><br>" +
+                    "<a href='../lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з інформерами</a>";
+                break;
+            case "conclusions":
+                document.querySelector("main .content").innerHTML =
+                    "Виконавши цю лабораторну роботу, ми придбали практичні навички роботи з jQuery UI, навчились додавати до " +
+                    "сайту динамічні елементи цієї бібліотеки, плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.";
+                break;
+        }
+    }
     // if (document.querySelector(".labButtons .activeButton").id === "lab6") {
     //     switch (button.id) {
     //

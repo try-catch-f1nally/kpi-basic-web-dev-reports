@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Динамічні елементи</title>
+    <link href="jquery-ui-1.13.0.custom/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui-1.13.0.custom/jquery-ui.js"></script>
+    <script src="jquery-ui-1.13.0.custom/datepicker-uk.js"></script>
+    <script src="jquery.vide.js"></script>
+    <script>
+        $(function () {
+            $('.accordion').accordion({
+                collapsible: true,
+                heightStyle: "content",
+                icons: {
+                    header: "ui-icon-plus",
+                    activeHeader: "ui-icon-minus"
+                }
+            });
+
+            $.datepicker.setDefaults($.datepicker.regional["uk"]);
+            $('#datepicker').datepicker();
+
+            $('.menu').menu();
+
+            $('.slider').slider();
+        })
+    </script>
+    <style>
+        html, body, .wrapper {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .accordion {
+            width: 55%;
+            margin: 0 auto;
+            /*position: relative;*/
+            /*top: 50%;*/
+        }
+
+        .ui-state-active {
+            background: #fff18e;
+            color: #000;
+            border: none;
+        }
+
+        .accordion .ui-widget-content {
+            background: transparent;
+        }
+
+        .ui-accordion .ui-accordion-header {
+            margin: 0;
+        }
+
+        .informers {
+            display: flex;
+        }
+
+        .menu {
+            width: 140px;
+        }
+
+        a.fa {
+            padding: 10px;
+            font-size: 40px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            transition-duration: 300ms;
+            border-radius: 8px;
+        }
+
+        a.fa:hover {
+            border-radius: 50%;
+        }
+
+        a.fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        a.fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        a.fa-instagram {
+            background: #f09433;
+            color: white;
+            background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1)
+        }
+
+        a.fa-pinterest {
+            background: #d70000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper" data-vide-bg="mp4:bg_video_trees.mp4"
+     data-vide-options="loop: true">
+    <div class="accordion">
+        <h3 class="date">Datepicker</h3>
+        <div>
+            <label for="datepicker">Оберіть дату:</label>
+            <input type="text" id="datepicker">
+        </div>
+        <h3>Menu</h3>
+        <div>
+            <ul class="menu">
+                <li>
+                    <div>Сортувати за</div>
+                    <ul>
+                        <li>
+                            <div>рейтингом</div>
+                        </li>
+                        <li>
+                            <div>датою</div>
+                        </li>
+                        <li>
+                            <div>зростанням</div>
+                        </li>
+                        <li>
+                            <div>спаданням</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Вигляд</div>
+                    <ul>
+                        <li>
+                            <div>список</div>
+                        </li>
+                        <li>
+                            <div>таблиця</div>
+                        </li>
+                        <li>
+                            <div>сітка</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Оновити</div>
+                </li>
+                <li>
+                    <div>Детальніше</div>
+                </li>
+            </ul>
+        </div>
+        <h3>Slider</h3>
+        <div>
+            <div class="slider"></div>
+        </div>
+        <h3>Icons of social networks</h3>
+        <div>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+        </div>
+        <h3>Informers</h3>
+        <div class="informers">
+            <div id="SinoptikInformer" style="width:240px;" class="SinoptikInformer type1c1">
+                <div class="siHeader">
+                    <div class="siLh">
+                        <div class="siMh"><a onmousedown="siClickCount();" class="siLogo" href="https://ua.sinoptik.ua/"
+                                             target="_blank" rel="nofollow" title="Погода"> </a>Погода <span
+                                id="siHeader"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="siBody"><a onmousedown="siClickCount();" href="https://ua.sinoptik.ua/погода-київ"
+                                       title="Погода у Києві" target="_blank">
+                    <div class="siCity">
+                        <div class="siCityName"><span>Київ</span></div>
+                        <div id="siCont0" class="siBodyContent">
+                            <div class="siLeft">
+                                <div class="siTerm"></div>
+                                <div class="siT" id="siT0"></div>
+                                <div id="weatherIco0"></div>
+                            </div>
+                            <div class="siInf"><p>вологість: <span id="vl0"></span></p>
+                                <p>тиск: <span id="dav0"></span></p>
+                                <p>вітер: <span id="wind0"></span></p></div>
+                        </div>
+                    </div>
+                </a>
+                    <div class="siLinks">Погода на 10 днів від <a href="https://ua.sinoptik.ua/погода-київ/10-днів"
+                                                                  title="Погода на 10 днів" target="_blank"
+                                                                  onmousedown="siClickCount();">sinoptik.ua</a></div>
+                </div>
+                <div class="siFooter">
+                    <div class="siLf">
+                        <div class="siMf"></div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript" charset="UTF-8"
+                    src="//sinoptik.ua/informers_js.php?title=4&amp;wind=3&amp;cities=303010783&amp;lang=ua"></script>
+            <div id="minfin-informer-m1Fn-currency">Загружаем <a href="https://minfin.com.ua/currency/" target="_blank">курсы
+                валют</a> от minfin.com.ua
+            </div>
+            <script>
+                var iframe = '<ifra' + 'me width="275" height="120" fram' + 'eborder="0" src="https://informer.minfin.com.ua/gen/course/?color=blue" vspace="0" scrolling="no" hspace="0" allowtransparency="true"style="width:275px;height:120px;ove' + 'rflow:hidden;"></iframe>';
+                var cl = 'minfin-informer-m1Fn-currency';
+                document.getElementById(cl).innerHTML = iframe;
+            </script>
+            <noscript><img src="https://informer.minfin.com.ua/gen/img.png" width="1" height="1"
+                           alt="minfin.com.ua: курсы валют" title="Курс валют" border="0"/></noscript>
+            <div class="cleanslate w24tz-current-time w24tz-middle"
+                 style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;">
+                <p><a href="//24timezones.com/%D0%9A%D0%B8%D1%97%D0%B2/%D1%87%D0%B0%D1%81" style="text-decoration: none"
+                      class="clock24"
+                      id="tz24-1636395400-c1367-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMSIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNjE4OTY5ODhhZjZkNiIsInR5cGUiOiJkYiIsImxhbmciOiJ1ayJ9"
+                      title="" target="_blank">Київ</a></p>
+                <div id="clock_block_cb61896988af6d6"></div>
+            </div>
+            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -26,7 +26,6 @@ if (text_case === "upper") {
 }
 if (color !== "#000000") {
     text = `<span style="color: ${color}">${text}</span>`;
-
 }
 document.querySelector(".result").innerHTML = text;
 
