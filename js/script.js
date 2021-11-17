@@ -50,18 +50,25 @@ function chooseLab(button) {
             break;
         case "lab5":
             document.querySelector("main .infoButtons").innerHTML =
-            "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\"> Постановка задачі ЛР №5</button>" +
-            "<button id=\"dynamic_elements\" onclick=\"chooseInfo(this)\"> Динамічні елементи </button>" +
-            "<button id=\"photogallery\" onclick=\"chooseInfo(this)\"> Фотогалерея </button>" +
-            "<button id=\"photoslider\" onclick=\"chooseInfo(this)\"> Слайдер фотографій </button>" +
-            "<button id=\"videoslider\" onclick=\"chooseInfo(this)\"> Слайдер відеоматеріалів </button>" +
-            "<button id=\"social_network_icons\" onclick=\"chooseInfo(this)\"> Кнопки соціальних мереж </button>" +
-            "<button id=\"informers\" onclick=\"chooseInfo(this)\"> Інформери </button>" +
-            "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
+                "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\"> Постановка задачі ЛР №5</button>" +
+                "<button id=\"dynamic_elements\" onclick=\"chooseInfo(this)\"> Динамічні елементи </button>" +
+                "<button id=\"photogallery\" onclick=\"chooseInfo(this)\"> Фотогалерея </button>" +
+                "<button id=\"photoslider\" onclick=\"chooseInfo(this)\"> Слайдер фотографій </button>" +
+                "<button id=\"videoslider\" onclick=\"chooseInfo(this)\"> Слайдер відеоматеріалів </button>" +
+                "<button id=\"social_network_icons\" onclick=\"chooseInfo(this)\"> Кнопки соціальних мереж </button>" +
+                "<button id=\"informers\" onclick=\"chooseInfo(this)\"> Інформери </button>" +
+                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
             break;
-        // case "lab6":
-        //     document.querySelector("main .infoButtons").innerHTML = "";
-        //     break;
+        case "lab6":
+            document.querySelector("main .infoButtons").innerHTML =
+                "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\"> Тема, Мета ЛР №6.<br> Посилання на GitHub. </button>" +
+                "<button id=\"dynamic_elements\" onclick=\"chooseInfo(this)\"> Динамічні елементи 3 пункту</button>" +
+                "<button id=\"installing_server\" onclick=\"chooseInfo(this)\"> Установка WEB-серверу </button>" +
+                "<button id=\"query_for_view\" onclick=\"chooseInfo(this)\"> Запит для перегляду </button>" +
+                "<button id=\"utf8_encoding\" onclick=\"chooseInfo(this)\"> Кодування UTF-8 </button>" +
+                "<button id=\"feedback\" onclick=\"chooseInfo(this)\"> Зворотній зв'язок. <br> Відображення дати.</button>" +
+                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
+            break;
         // case "lab7":
         //     document.querySelector("main .infoButtons").innerHTML = "";
         //     break;
@@ -647,16 +654,88 @@ function chooseInfo(button) {
                 break;
             case "conclusions":
                 document.querySelector("main .content").innerHTML =
-                    "Виконавши цю лабораторну роботу, ми придбали практичні навички роботи з jQuery UI, навчились додавати до " +
-                    "сайту динамічні елементи цієї бібліотеки, плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.";
+                    "<p>Виконавши цю лабораторну роботу, ми придбали практичні навички роботи з jQuery UI, навчились додавати до " +
+                    "сайту динамічні елементи цієї бібліотеки, плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.</p>";
                 break;
         }
     }
-    // if (document.querySelector(".labButtons .activeButton").id === "lab6") {
-    //     switch (button.id) {
-    //
-    //     }
-    // }
+    if (document.querySelector(".labButtons .activeButton").id === "lab6") {
+        switch (button.id) {
+            case "theme":
+                document.querySelector("main .content").innerHTML =
+                    "<p><b> Тема: </b> WEB-сервери та принципи їх роботи з користувачем. Cерверні WEB-застосування.</p>" +
+                    "<p><b> Мета: </b> придбати практичні навички встановлення та конфігурування WEB-сервера, " +
+                    "встановлення та налаштування Apache.</p><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/University_Web_Reports' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/Films4You' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/Films4You - Сайт</a><br>" +
+                    "<a href='https://gangstaprogrammer.github.io/Films4You/' target='_blank'>" +
+                    "https://gangstaprogrammer.github.io/Films4You/ - Сайт(github page)</a>";
+                break;
+            case "dynamic_elements":
+                document.querySelector("main .content").innerHTML =
+                    "<div class='elementImages'> " +
+                    "   <img src='../img/lab6/tooltip_autocomplete_js.png' width='' alt=''>" +
+                    "   <img src='../img/lab6/year_slider_js.png' width='' alt=''> " +
+                    "   <img src='../img/lab6/dynamic_elements_view.png' width='' alt=''> " +
+                    "   <img src='../img/lab6/year_slider_view.png' width='' alt=''> " +
+                    "</div>";
+                break;
+            case "installing_server":
+                document.querySelector("main .content").innerHTML =
+                    "<div class='elementImages'> " +
+                    "   <p> Заходимо на офіційний сайт розробника Open Server та завантажуємо інсталятор: </p>" +
+                    "   <img src='../img/lab6/open_server_site.png' width='' alt=''> " +
+                    "   <img src='../img/lab6/download_server.png' width='' alt=''> " +
+                    "   <p> Відкриваємо інсталятор та починаємо встановлення: </p>" +
+                    "   <img src='../img/lab6/installing1.png' alt=''> " +
+                    "   <p> Погоджуємося з правилами користування: </p>" +
+                    "   <img src='../img/lab6/installing2.png' alt=''>" +
+                    "   <p> Обираємо директорію для встановлення серверу: </p>" +
+                    "   <img src='../img/lab6/installing3.png' alt=''> " +
+                    "   <p> Обираємо компактне встановлення: </p>" +
+                    "   <img src='../img/lab6/installing4.png' alt=''> " +
+                    "   <p> Залишаємо дефолтні налаштування: </p>" +
+                    "   <img src='../img/lab6/installing5.png' alt=''> " +
+                    "   <img src='../img/lab6/installing6.png' alt=''> " +
+                    "</div>";
+                break;
+            case "query_for_view":
+                document.querySelector("main .content").innerHTML =
+                    "<div class='elementImages'> " +
+                    "   <p> Поміщаємо наш проект у директорію domains: </p>" +
+                    "   <img src='../img/lab6/domains_dir.png' width='' alt=''> " +
+                    "   <p> Вмикаємо сервер та відкриваємо нашу сторінку: </p>" +
+                    "   <img src='../img/lab6/open_server_context_menu.png' alt=''> " +
+                    "   <img src='../img/lab6/hosted_site.png' width='1000' alt=''> " +
+                    "</div>";
+                break;
+            case "utf8_encoding":
+                document.querySelector("main .content").innerHTML =
+                    "<div class='elementImages'> " +
+                    "   <p> Знаходимо файл конфігурації php.ini: </p>" +
+                    "   <img src='../img/lab6/find_php_ini.png' alt=''> " +
+                    "   <p> Знаходимо параметр default_charset: </p>" +
+                    "   <img src='../img/lab6/php_ini_find_encode.png' alt=''>" +
+                    "   <p> Прибираємо \";\" : </p>" +
+                    "   <img src='../img/lab6/php_ini_set_encode.png' alt=''>" +
+                    "</div>";
+                break;
+            case "feedback":
+                document.querySelector("main .content").innerHTML =
+                    "<div class='elementImages'> " +
+                    "   <img src='../img/lab6/datetime_form_php.png' alt=''>" +
+                    "   <img src='../img/lab6/datetime_form_view.png' alt=''>" +
+                    "</div>";
+                break;
+            case "conclusions":
+                document.querySelector("main .content").innerHTML =
+                    "<p> Виконавши цю лабораторну роботу, ми придбали практичні навички встановлення та конфігурування " +
+                    "WEB-сервера, встановлення та налаштування Apache.</p>";
+                break;
+        }
+    }
     // if (document.querySelector(".labButtons .activeButton").id === "lab7") {
     //     switch (button.id) {
     //
