@@ -41,3 +41,23 @@ a {
     display: flex;
 }
 
+pre {
+    font-family: monospace;
+}
+
+th, td {
+    font-size: 18px;
+    padding: 7px;
+    background: #ffffff;
+}
+
+th {
+    background: #001684;
+    color: #fff;
+    border-bottom: 2px solid #ffffff;
+}
+
+td {
+    color: #000000;
+    background: #83a8ff;
+}

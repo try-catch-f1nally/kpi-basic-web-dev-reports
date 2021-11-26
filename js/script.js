@@ -69,9 +69,16 @@ function chooseLab(button) {
                 "<button id=\"feedback\" onclick=\"chooseInfo(this)\"> Зворотній зв'язок. <br> Відображення дати.</button>" +
                 "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
             break;
-        // case "lab7":
-        //     document.querySelector("main .infoButtons").innerHTML = "";
-        //     break;
+        case "lab7":
+            document.querySelector("main .infoButtons").innerHTML =
+                "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\"> Тема, Мета ЛР №7.<br> Посилання на GitHub. </button>" +
+                "<button id=\"describing_model\" onclick=\"chooseInfo(this)\"> Опис об'єктів предметної області </button>" +
+                "<button id=\"infologic_model\" onclick=\"chooseInfo(this)\"> Інфологічна модель </button>" +
+                "<button id=\"datalogic_model\" onclick=\"chooseInfo(this)\"> Датологічна модель </button>" +
+                "<button id=\"db_phpMyAdmin\" onclick=\"chooseInfo(this)\"> Реалізація БД у phpMyAdmin </button>" +
+                "<button id=\"interaction_php\" onclick=\"chooseInfo(this)\"> Взаємодія з БД <br> за допомогою PHP </button>" +
+                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
+            break;
         // case "lab8":
         //     document.querySelector("main .infoButtons").innerHTML = "";
         //     break;
@@ -552,16 +559,16 @@ function chooseInfo(button) {
             case "task4":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab4/var3/3_task4.js' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='lab4/var3/3_task4.js' target='_blank'> Варіант 3 - Діана</a></li>" +
                     "<div class='elementImages'>" +
                     "<div><img src='../../img/lab4/3_task4_code.png' width='650px' alt=''></div></div>" +
                     "<div><img src='../../img/lab4/3_task4_result.png' width='400px' alt=''></div></div></li>" +
-                    "<li> <a href='../lab4/var4/4_task4.js' target='_blank'> Варіант 4 - Нікіта</a>" +
+                    "<li> <a href='lab4/var4/4_task4.js' target='_blank'> Варіант 4 - Нікіта</a>" +
                     "<div class='elementImages'>" +
                     "<div><img src='../../img/lab4/4_task4_code.png' width='650px' alt=''></div></div>" +
                     "<div><img src='../../img/lab4/4_task4_result.png' width='400px' alt=''></div></div></li>" +
-                    "<li> <a href='../lab4/var6/6_task4.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab4/var7/7_task4.js' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='lab4/var6/6_task4.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='lab4/var7/7_task4.js' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "<div class='elementImages'>" +
                     "<div><img src='../../img/lab4/7_task4_code1.jpg' width='650px' alt=''></div></div>" +
                     "<div><img src='../../img/lab4/7_task4_code2.jpg' width='650px' alt=''></div></div>" +
@@ -571,10 +578,10 @@ function chooseInfo(button) {
             case "task6":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab4/var3/3_task6.html' target='_blank'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab4/var4/4_task6.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab4/var6/6_task6.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab4/var7/7_task6.html' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='lab4/var3/3_task6.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='lab4/var4/4_task6.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='lab4/var6/6_task6.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='lab4/var7/7_task6.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "conclusions":
@@ -607,7 +614,7 @@ function chooseInfo(button) {
                     "   <div><img src='../img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
                     "   <div><img src='../img/lab5/dynmaic_elements_scripts.png' width='400' alt=''></div> " +
                     "</div><br>" +
-                    "<a href='../lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з динамічними елементами</a>";
+                    "<a href='lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з динамічними елементами</a>";
                 break;
             case "photogallery":
                 document.querySelector("main .content").innerHTML =
@@ -616,7 +623,7 @@ function chooseInfo(button) {
                     "   <div><img src='../img/lab5/adding_unitegallery_html.png' width='1000' alt=''></div> " +
                     "   <div><img src='../img/lab5/photogallery_script.png' alt=''></div> " +
                     "</div><br>" +
-                    "<a href='../lab5/photogallery.html' target='_blank'>Сторінка з фотогалереєю</a>";
+                    "<a href='lab5/photogallery.html' target='_blank'>Сторінка з фотогалереєю</a>";
                 break;
             case "photoslider":
                 document.querySelector("main .content").innerHTML =
@@ -625,7 +632,7 @@ function chooseInfo(button) {
                     "   <div><img src='../img/lab5/photoslider_html.png' width='1000' alt=''></div> " +
                     "   <div><img src='../img/lab5/photoslider_script.png' alt=''></div> " +
                     "</div><br>" +
-                    "<a href='../lab5/photoslider.html' target='_blank'>Сторінка з фотослайдером</a>";
+                    "<a href='lab5/photoslider.html' target='_blank'>Сторінка з фотослайдером</a>";
                 break;
             case "videoslider":
                 document.querySelector("main .content").innerHTML =
@@ -634,7 +641,7 @@ function chooseInfo(button) {
                     "   <div><img src='../img/lab5/videoslider_html.png' width='1000' alt=''></div> " +
                     "   <div><img src='../img/lab5/videoslider_script.png' alt=''></div> " +
                     "</div><br>" +
-                    "<a href='../lab5/videoslider.html' target='_blank'>Сторінка з відеослайдером</a>";
+                    "<a href='lab5/videoslider.html' target='_blank'>Сторінка з відеослайдером</a>";
                 break;
             case "social_network_icons":
                 document.querySelector("main .content").innerHTML =
@@ -642,7 +649,7 @@ function chooseInfo(button) {
                     "<div class='elementImages'> " +
                     "   <div><img src='../img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
                     "</div><br>" +
-                    "<a href='../lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з іконками соціальних мереж</a>";
+                    "<a href='lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з іконками соціальних мереж</a>";
                 break;
             case "informers":
                 document.querySelector("main .content").innerHTML =
@@ -650,7 +657,7 @@ function chooseInfo(button) {
                     "<div class='elementImages'> " +
                     "   <div><img src='../img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
                     "</div><br>" +
-                    "<a href='../lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з інформерами</a>";
+                    "<a href='lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з інформерами</a>";
                 break;
             case "conclusions":
                 document.querySelector("main .content").innerHTML =
@@ -736,11 +743,180 @@ function chooseInfo(button) {
                 break;
         }
     }
-    // if (document.querySelector(".labButtons .activeButton").id === "lab7") {
-    //     switch (button.id) {
-    //
-    //     }
-    // }
+    if (document.querySelector(".labButtons .activeButton").id === "lab7") {
+        switch (button.id) {
+            case "theme":
+                document.querySelector("main .content").innerHTML =
+                    "<p><b> Тема: </b> взаємодія WEB-застосувань з системою управління базами даних (СУБД). " +
+                    "Обробка результатів SQL-запитів у PHP-сценарії.</p>" +
+                    "<p><b> Мета: </b> придбати практичні навички підключення до СУБД, вибору бази даних, виконання " +
+                    "запиту, отримання результатів, відключення від СУБД. </p><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/University_Web_Reports' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/Films4You' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/Films4You - Сайт</a><br>" +
+                    "<a href='https://gangstaprogrammer.github.io/Films4You/' target='_blank'>" +
+                    "https://gangstaprogrammer.github.io/Films4You/ - Сайт(github page)</a>";
+                break;
+            case "describing_model":
+                document.querySelector("main .content").innerHTML =
+                    "<h2> Варіант 4 (Фільмотека) </h2>" +
+                    "<p>Виділимо базові сутності, атрибути та зв'язки предметної області \"Фільмотека\":</p>" +
+                    "<table>" +
+                    "   <tr>" +
+                    "       <th> Сутності </th>" +
+                    "       <th> Атрибути </th>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Фільми </td>" +
+                    "       <td> id, назва, рік, країна, тривалість, режисер_id </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Жанри </td>" +
+                    "       <td> id, назва </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Актори </td>" +
+                    "       <td> id, Ім'я, Прізвище </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Режисери </td>" +
+                    "       <td> id, Ім'я, Прізвище </td>" +
+                    "   </tr>" +
+                    "</table><br>" +
+                    "<table>" +
+                    "   <tr>" +
+                    "       <th> Зв'язки </th>" +
+                    "       <th> Сутності та атрибути, що беруть участь у зв'зку </th>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Зрежисував </td>" +
+                    "       <td> Фільми.режисер_id -> Режисери.id </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Фільм належить до жанру </td>" +
+                    "       <td> фільм_id -> Фільми.id, жанр_id -> Жанри.id </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Актор знявся у фільмі </td>" +
+                    "       <td> фільм_id -> Фільми.id, актор_id -> Актори.id </td>" +
+                    "   </tr>" +
+                    "</table>";
+                break;
+            case "infologic_model":
+                document.querySelector("main .content").innerHTML =
+                    "<div style='text-align: center'> " +
+                    // "   <img src='img/lab7/var3_infologic_model.png' height='420' alt=''>" +
+                    "   <h2> Варіант 4 (Фільмотека) </h2> " +
+                    "   <img src='img/lab7/var4_infologic_model.png' height='420' alt=''>" +
+                    // "   <img src='img/lab7/var6_infologic_model.png' height='420' alt=''>" +
+                    // "   <img src='img/lab7/var7_infologic_model.png' height='420' alt=''>" +
+                    "</div>";
+                break;
+            case "datalogic_model":
+                document.querySelector("main .content").innerHTML =
+                    "<div style='text-align: center'> " +
+                    // "   <img src='img/lab7/var3_datalogic_model.png' height='420' alt=''>" +
+                    "   <h2> Варіант 4 (Фільмотека) </h2> " +
+                    "   <p style='text-align: left'>Для формалізації зв’язку між таблицями Films та Genres створюємо допоміжну " +
+                    "таблицю film_genre, що містить вторинні ключі – посилання на ідентифікатори таблиць," +
+                    " які зв’язує. Аналогічно створюємо допоміжну таблицю film_actor.</p>" +
+                    "   <img src='img/lab7/var4_datalogic_model.png' height='420' alt=''>" +
+                    // "   <img src='img/lab7/var6_datalogic_model.png' height='420' alt=''>" +
+                    // "   <img src='img/lab7/var7_datalogic_model.png' height='420' alt=''>" +
+                    "</div>";
+                break;
+            case "db_phpMyAdmin":
+                document.querySelector("main .content").innerHTML =
+                    "<h2> Варіант 4 (Фільмотека) </h2>" +
+                    "<p> Скрипти для створення БД та її об'єктів:</p>" +
+                    "<pre>CREATE DATABASE FILMS_LIBRARY;\n" +
+                    "USE FILMS_LIBRARY;\n" +
+                    "\n" +
+                    "CREATE TABLE Films\n" +
+                    "(\n" +
+                    "    id               INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    director_id      INT                            NOT NULL,\n" +
+                    "    name             VARCHAR(30)                    NOT NULL,\n" +
+                    "    year             YEAR                           NOT NULL,\n" +
+                    "    country          VARCHAR(30)                    NOT NULL,\n" +
+                    "    duration_minutes INT                            NOT NULL,\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE Directors\n" +
+                    "(\n" +
+                    "    id         INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    first_name VARCHAR(30)                    NOT NULL,\n" +
+                    "    last_name  VARCHAR(30)                    NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE Actors\n" +
+                    "(\n" +
+                    "    id         INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    first_name VARCHAR(30)                    NOT NULL,\n" +
+                    "    last_name  VARCHAR(30)                    NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE Genres\n" +
+                    "(\n" +
+                    "    id   INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    name VARCHAR(30)                    NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE film_actor\n" +
+                    "(\n" +
+                    "    id       INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    film_id  INT                            NOT NULL,\n" +
+                    "    actor_id INT                            NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE film_genre\n" +
+                    "(\n" +
+                    "    id       INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    film_id  INT                            NOT NULL,\n" +
+                    "    genre_id INT                            NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "ALTER TABLE Films\n" +
+                    "    ADD CONSTRAINT FK_Films_director_id_Directors\n" +
+                    "        FOREIGN KEY (director_id) REFERENCES Directors (id);\n" +
+                    "\n" +
+                    "ALTER TABLE film_actor\n" +
+                    "    ADD CONSTRAINT FK_film_actor_film_id_Films\n" +
+                    "        FOREIGN KEY (film_id) REFERENCES Films (id);\n" +
+                    "\n" +
+                    "ALTER TABLE film_actor\n" +
+                    "    ADD CONSTRAINT FK_film_actor_actor_id_Actors\n" +
+                    "        FOREIGN KEY (actor_id) REFERENCES Actors (id);\n" +
+                    "\n" +
+                    "ALTER TABLE film_genre\n" +
+                    "    ADD CONSTRAINT FK_film_genre_film_id_Films\n" +
+                    "        FOREIGN KEY (film_id) REFERENCES Films (id);\n" +
+                    "\n" +
+                    "ALTER TABLE film_genre\n" +
+                    "    ADD CONSTRAINT FK_film_genre_actor_id_Genres\n" +
+                    "        FOREIGN KEY (genre_id) REFERENCES Genres (id);\n</pre>" +
+                    "<p>Фізична модель даних створена у phpMyAdmin</p>" +
+                    "<img src='img/lab7/var4_physical_model.png' height='420' alt=''>";
+                break;
+            case "interaction_php":
+                document.querySelector("main .content").innerHTML =
+                    "<h2> Варіант 4 (Фільмотека) </h2>" +
+                    "<div class='elementImages'>" +
+                    "   <img src='img/lab7/var4_main_page.png' width='600' alt=''>" +
+                    "   <img src='img/lab7/var4_films_page.png' width='900' alt=''>" +
+                    "   <img src='img/lab7/var4_genres_page.png' width='300' alt=''>" +
+                    "   <img src='img/lab7/var4_actors_page.png' width='300' alt=''>" +
+                    "   <img src='img/lab7/var4_directors_page.png' width='300' alt=''>" +
+                    "</div>";
+                break;
+            case "conclusions":
+                document.querySelector("main .content").innerHTML =
+                    "<p>Виконавши цю лабораторну роботу, ми придбали практичні навички підключення до СУБД, вибору бази даних, виконання " +
+                    "запиту, отримання результатів, відключення від СУБД.</p>";
+                break;
+        }
+    }
     // if (document.querySelector(".labButtons .activeButton").id === "lab8") {
     //     switch (button.id) {
     //
@@ -752,3 +928,4 @@ function chooseInfo(button) {
     //     }
     // }
 }
+
