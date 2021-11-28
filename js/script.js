@@ -138,48 +138,50 @@ function chooseInfo(button) {
                     "<a href='https://gangstaprogrammer.github.io/Films4You/'>https://gangstaprogrammer.github.io/Films4You/</a></p>";
                 break;
             case "structure":
-                document.querySelector("main .content").innerHTML = "<div class=\"structure\">" +
-                    "                <div><img src=\"img/lab1/structure.png\" alt=\"\"></div>" +
-                    "                <div><p><i>6_task4.html</i> - базовий HTML-документ </p>" +
-                    "                    <p><i>temp.html</i> - HTML-документ з таблицею та формою</p>" +
-                    "                    <p><i>6_task4.css</i> - базовий css </p>" +
-                    "                    <p><i>reset.css</i> - css, що обнуляє стилі, які за замовчуванням задані браузерами </p>" +
-                    "                </div>" +
-                    "            </div>";
+                document.querySelector("main .content").innerHTML =
+                    "<div class=\"structure\">" +
+                    "   <div><img src=\"img/lab1/structure.png\" alt=\"\"></div>" +
+                    "   <div><p><i>6_task4.html</i> - базовий HTML-документ </p>" +
+                    "       <p><i>temp.html</i> - HTML-документ з таблицею та формою</p>" +
+                    "       <p><i>6_task4.css</i> - базовий css </p>" +
+                    "       <p><i>reset.css</i> - css, що обнуляє стилі, які за замовчуванням задані браузерами </p>" +
+                    "   </div>" +
+                    "</div>";
                 break;
             case "tables":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
-                    "                <div><img src=\"img/lab1/tableCode.png\" alt=\"\"></div>" +
-                    "                <div><img src=\"img/lab1/tableImg.png\" alt=\"\"></div>" +
-                    "            </div>" +
-                    "            <div>" +
-                    "                <p>Елемент &lt;table&gt; - контейнер для елементів, що визначають вміст таблиці</p>" +
-                    "                <p> &lt;tr&gt; - створює рядок таблиці</p>" +
-                    "                <p> &lt;td&gt; - створює комірки таблиці</p>" +
-                    "                <p> &lt;thead&gt; - створює рядок, який розміщений зверху таблиці.</p>" +
-                    "                <p> &lt;tfoot&gt; - створює рядок, який розміщений знизу таблиці.</p>" +
-                    "            </div>";
+                document.querySelector("main .content").innerHTML =
+                    "<div class=\"elementImages\">" +
+                    "   <img src=\"img/lab1/tableCode.png\" alt=\"\">" +
+                    "   <img src=\"img/lab1/tableImg.png\" alt=\"\">" +
+                    "</div>" +
+                    "<div>" +
+                    "   <p>Елемент &lt;table&gt; - контейнер для елементів, що визначають вміст таблиці</p>" +
+                    "   <p> &lt;tr&gt; - створює рядок таблиці</p>" +
+                    "   <p> &lt;td&gt; - створює комірки таблиці</p>" +
+                    "   <p> &lt;thead&gt; - створює рядок, який розміщений зверху таблиці.</p>" +
+                    "   <p> &lt;tfoot&gt; - створює рядок, який розміщений знизу таблиці.</p>" +
+                    "</div>";
                 break;
             case "forms":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
-                    "                <div><img src=\"img/lab1/formCode.png\" alt=\"\"></div>" +
-                    "                <div><img src=\"img/lab1/tableImg.png\" alt=\"\"></div>" +
-                    "            </div>" +
-                    "            <div>" +
-                    "                <p>Елемент &lt;form&gt; представляє собою розділ документа, що містить інтерактивні елементи" +
-                    "                управління, які дозволяють користувачеві відправляти інформацію на веб-сервер.</p>" +
-                    "                <p>&lt;input&gt; створює інтерактивні елементи управління в веб-формах для" +
-                    "                    отримання даних від користувача</p>" +
-                    "            </div>";
+                document.querySelector("main .content").innerHTML =
+                    "<div class=\"elementImages\">" +
+                    "   <img src=\"img/lab1/formCode.png\" alt=\"\">" +
+                    "   <img src=\"img/lab1/tableImg.png\" alt=\"\">" +
+                    "</div>" +
+                    "<div>" +
+                    "   <p>Елемент &lt;form&gt; представляє собою розділ документа, що містить інтерактивні елементи" +
+                    "   управління, які дозволяють користувачеві відправляти інформацію на веб-сервер.</p>" +
+                    "   <p>&lt;input&gt; створює інтерактивні елементи управління в веб-формах для" +
+                    "   отримання даних від користувача</p>" +
+                    "</div>";
                 break;
             case "images":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
-                    "                <div><img src=\"img/lab1/imgCode.png\" alt=\"\"></div>" +
-                    "                <div><img src=\"img/lab1/imgImgs.png\" alt=\"\"></div>" +
-                    "            </div>" +
-                    "            <div>" +
-                    "                <p>HTML-елемент &lt;img&gt; вбудовує зображення в документ.</p>" +
-                    "            </div>";
+                document.querySelector("main .content").innerHTML =
+                    "<div class=\"elementImages\">" +
+                    "   <img src=\"img/lab1/imgCode.png\" alt=\"\">" +
+                    "   <img src=\"img/lab1/imgImgs.png\" alt=\"\">" +
+                    "</div>" +
+                    "   <p>HTML-елемент &lt;img&gt; вбудовує зображення в документ.</p>";
                 break;
             case "conclusion":
                 document.querySelector("main .content").innerHTML = "<p> Виконавши дану лабораторну роботу," +
@@ -192,7 +194,9 @@ function chooseInfo(button) {
     if (document.querySelector(".labButtons .activeButton").id === "lab2") {
         switch (button.id) {
             case "about":
-                document.querySelector("main .content").innerHTML = "<p><b'>Тема: </b> Каскадні таблиці стилів. Селектори .ідентифікатори. Стильове оформлення текстових елементів в html-документах.</p>" +
+                document.querySelector("main .content").innerHTML =
+                    "<p><b'>Тема: </b> Каскадні таблиці стилів. Селектори .ідентифікатори. Стильове оформлення " +
+                    "текстових елементів в html-документах.</p>" +
                     "<p><b>Завдання:</b>" +
                     "<ol><li> У програмному коді лабораторної работи №2 застосувати селектори тегу і класу на свій розуд. " +
                     "Вміти пояснити викладачу. Програмний код  даного пункту відобразити у звітному HTML-документі;</li>" +
@@ -238,7 +242,8 @@ function chooseInfo(button) {
                     "</div>";
                 break;
             case "indents":
-                document.querySelector("main .content").innerHTML = "<div class=\"elementImages\">" +
+                document.querySelector("main .content").innerHTML =
+                    "<div class=\"elementImages\">" +
                     "<div> <img src=\"img/lab2/paddingCode.jpg\" alt=\"\"></div>" +
                     "<div> <img src=\"img/lab2/paddingImg.jpg\" style=\"width: 200px;\" alt=\"\"></div>" +
                     "<div> <img src='img/lab2/paddingHtml.png' alt=''/> </div></div>" +
@@ -498,23 +503,24 @@ function chooseInfo(button) {
             case "table_layout":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab3/3_table.html' target='_blank'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab3/4_table.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab3/6_table.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab3/7_table.html' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='lab3/3_table.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='lab3/4_table.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='lab3/6_table.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='lab3/7_table.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "float_layout":
                 document.querySelector("main .content").innerHTML =
                     "<ol>" +
-                    "<li> <a href='../lab3/3_float.html' target='_blank'> Варіант 3 - Діана</a></li>" +
-                    "<li> <a href='../lab3/4_float.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
-                    "<li> <a href='../lab3/6_float.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
-                    "<li> <a href='../lab3/7_float.html' target='_blank'> Варіант 7 - Саша</a></li>" +
+                    "<li> <a href='lab3/3_float.html' target='_blank'> Варіант 3 - Діана</a></li>" +
+                    "<li> <a href='lab3/4_float.html' target='_blank'> Варіант 4 - Нікіта</a></li>" +
+                    "<li> <a href='lab3/6_float.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
+                    "<li> <a href='lab3/7_float.html' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "</ol>";
                 break;
             case "conclusions":
-                document.querySelector("main .content").innerHTML = "<p> Виконавши дану лабораторну роботу," +
+                document.querySelector("main .content").innerHTML =
+                    "<p> Виконавши дану лабораторну роботу," +
                     " ми придбали практичні навички роботи верстки сторінок засобами CSS, " +
                     " верстки на основі плаваючих елементів та таблиць," +
                     " з’ясували переваги та недоліки типів макетів веб-сторінок. </p>";
@@ -561,18 +567,18 @@ function chooseInfo(button) {
                     "<ol>" +
                     "<li> <a href='lab4/var3/3_task4.js' target='_blank'> Варіант 3 - Діана</a></li>" +
                     "<div class='elementImages'>" +
-                    "<div><img src='../../img/lab4/3_task4_code.png' width='650px' alt=''></div></div>" +
-                    "<div><img src='../../img/lab4/3_task4_result.png' width='400px' alt=''></div></div></li>" +
+                    "<div><img src='img/lab4/3_task4_code.png' width='650px' alt=''></div></div>" +
+                    "<div><img src='img/lab4/3_task4_result.png' width='400px' alt=''></div></div></li>" +
                     "<li> <a href='lab4/var4/4_task4.js' target='_blank'> Варіант 4 - Нікіта</a>" +
                     "<div class='elementImages'>" +
-                    "<div><img src='../../img/lab4/4_task4_code.png' width='650px' alt=''></div></div>" +
-                    "<div><img src='../../img/lab4/4_task4_result.png' width='400px' alt=''></div></div></li>" +
+                    "<div><img src='img/lab4/4_task4_code.png' width='650px' alt=''></div></div>" +
+                    "<div><img src='img/lab4/4_task4_result.png' width='400px' alt=''></div></div></li>" +
                     "<li> <a href='lab4/var6/6_task4.html' target='_blank'> Варіант 6 - Андрюша</a></li>" +
                     "<li> <a href='lab4/var7/7_task4.js' target='_blank'> Варіант 7 - Саша</a></li>" +
                     "<div class='elementImages'>" +
-                    "<div><img src='../../img/lab4/7_task4_code1.jpg' width='650px' alt=''></div></div>" +
-                    "<div><img src='../../img/lab4/7_task4_code2.jpg' width='650px' alt=''></div></div>" +
-                    "<div><img src='../../img/lab4/7_task4_result.jpg' width='650px' alt=''></div></div></li>" +
+                    "<div><img src='img/lab4/7_task4_code1.jpg' width='650px' alt=''></div></div>" +
+                    "<div><img src='img/lab4/7_task4_code2.jpg' width='650px' alt=''></div></div>" +
+                    "<div><img src='img/lab4/7_task4_result.jpg' width='650px' alt=''></div></div></li>" +
                     "</ol>";
                 break;
             case "task6":
@@ -611,8 +617,8 @@ function chooseInfo(button) {
                 document.querySelector("main .content").innerHTML =
                     "<p>Підключення потрібних бібліотек: </p>" +
                     "<div class='elementImages'> " +
-                    "   <div><img src='../img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
-                    "   <div><img src='../img/lab5/dynmaic_elements_scripts.png' width='400' alt=''></div> " +
+                    "   <div><img src='img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
+                    "   <div><img src='img/lab5/dynmaic_elements_scripts.png' width='400' alt=''></div> " +
                     "</div><br>" +
                     "<a href='lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з динамічними елементами</a>";
                 break;
@@ -620,8 +626,8 @@ function chooseInfo(button) {
                 document.querySelector("main .content").innerHTML =
                     "<p>Підключення потрібних бібліотек: </p>" +
                     "<div class='elementImages'> " +
-                    "   <div><img src='../img/lab5/adding_unitegallery_html.png' width='1000' alt=''></div> " +
-                    "   <div><img src='../img/lab5/photogallery_script.png' alt=''></div> " +
+                    "   <div><img src='img/lab5/adding_unitegallery_html.png' width='1000' alt=''></div> " +
+                    "   <div><img src='img/lab5/photogallery_script.png' alt=''></div> " +
                     "</div><br>" +
                     "<a href='lab5/photogallery.html' target='_blank'>Сторінка з фотогалереєю</a>";
                 break;
@@ -629,8 +635,8 @@ function chooseInfo(button) {
                 document.querySelector("main .content").innerHTML =
                     "<p>Підключення потрібних бібліотек: </p>" +
                     "<div class='elementImages'> " +
-                    "   <div><img src='../img/lab5/photoslider_html.png' width='1000' alt=''></div> " +
-                    "   <div><img src='../img/lab5/photoslider_script.png' alt=''></div> " +
+                    "   <div><img src='img/lab5/photoslider_html.png' width='1000' alt=''></div> " +
+                    "   <div><img src='img/lab5/photoslider_script.png' alt=''></div> " +
                     "</div><br>" +
                     "<a href='lab5/photoslider.html' target='_blank'>Сторінка з фотослайдером</a>";
                 break;
@@ -638,8 +644,8 @@ function chooseInfo(button) {
                 document.querySelector("main .content").innerHTML =
                     "<p>Підключення потрібних бібліотек: </p>" +
                     "<div class='elementImages'> " +
-                    "   <div><img src='../img/lab5/videoslider_html.png' width='1000' alt=''></div> " +
-                    "   <div><img src='../img/lab5/videoslider_script.png' alt=''></div> " +
+                    "   <div><img src='img/lab5/videoslider_html.png' width='1000' alt=''></div> " +
+                    "   <div><img src='img/lab5/videoslider_script.png' alt=''></div> " +
                     "</div><br>" +
                     "<a href='lab5/videoslider.html' target='_blank'>Сторінка з відеослайдером</a>";
                 break;
@@ -647,7 +653,7 @@ function chooseInfo(button) {
                 document.querySelector("main .content").innerHTML =
                     "<p>Підключення потрібних бібліотек: </p>" +
                     "<div class='elementImages'> " +
-                    "   <div><img src='../img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
+                    "   <div><img src='img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
                     "</div><br>" +
                     "<a href='lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з іконками соціальних мереж</a>";
                 break;
@@ -655,7 +661,7 @@ function chooseInfo(button) {
                 document.querySelector("main .content").innerHTML =
                     "<p>Підключення потрібних бібліотек: </p>" +
                     "<div class='elementImages'> " +
-                    "   <div><img src='../img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
+                    "   <div><img src='img/lab5/adding_libraries_html.png' width='1000' alt=''></div> " +
                     "</div><br>" +
                     "<a href='lab5/dynamic_elements_jquery.html' target='_blank'>Сторінка з інформерами</a>";
                 break;
@@ -683,57 +689,57 @@ function chooseInfo(button) {
             case "dynamic_elements":
                 document.querySelector("main .content").innerHTML =
                     "<div class='elementImages'> " +
-                    "   <img src='../img/lab6/tooltip_autocomplete_js.png' width='' alt=''>" +
-                    "   <img src='../img/lab6/year_slider_js.png' width='' alt=''> " +
-                    "   <img src='../img/lab6/dynamic_elements_view.png' width='' alt=''> " +
-                    "   <img src='../img/lab6/year_slider_view.png' width='' alt=''> " +
+                    "   <img src='img/lab6/tooltip_autocomplete_js.png' width='' alt=''>" +
+                    "   <img src='img/lab6/year_slider_js.png' width='' alt=''> " +
+                    "   <img src='img/lab6/dynamic_elements_view.png' width='' alt=''> " +
+                    "   <img src='img/lab6/year_slider_view.png' width='' alt=''> " +
                     "</div>";
                 break;
             case "installing_server":
                 document.querySelector("main .content").innerHTML =
                     "<div class='elementImages'> " +
                     "   <p> Заходимо на офіційний сайт розробника Open Server та завантажуємо інсталятор: </p>" +
-                    "   <img src='../img/lab6/open_server_site.png' width='' alt=''> " +
-                    "   <img src='../img/lab6/download_server.png' width='' alt=''> " +
+                    "   <img src='img/lab6/open_server_site.png' width='' alt=''> " +
+                    "   <img src='img/lab6/download_server.png' width='' alt=''> " +
                     "   <p> Відкриваємо інсталятор та починаємо встановлення: </p>" +
-                    "   <img src='../img/lab6/installing1.png' alt=''> " +
+                    "   <img src='img/lab6/installing1.png' alt=''> " +
                     "   <p> Погоджуємося з правилами користування: </p>" +
-                    "   <img src='../img/lab6/installing2.png' alt=''>" +
+                    "   <img src='img/lab6/installing2.png' alt=''>" +
                     "   <p> Обираємо директорію для встановлення серверу: </p>" +
-                    "   <img src='../img/lab6/installing3.png' alt=''> " +
+                    "   <img src='img/lab6/installing3.png' alt=''> " +
                     "   <p> Обираємо компактне встановлення: </p>" +
-                    "   <img src='../img/lab6/installing4.png' alt=''> " +
+                    "   <img src='img/lab6/installing4.png' alt=''> " +
                     "   <p> Залишаємо дефолтні налаштування: </p>" +
-                    "   <img src='../img/lab6/installing5.png' alt=''> " +
-                    "   <img src='../img/lab6/installing6.png' alt=''> " +
+                    "   <img src='img/lab6/installing5.png' alt=''> " +
+                    "   <img src='img/lab6/installing6.png' alt=''> " +
                     "</div>";
                 break;
             case "query_for_view":
                 document.querySelector("main .content").innerHTML =
                     "<div class='elementImages'> " +
                     "   <p> Поміщаємо наш проект у директорію domains: </p>" +
-                    "   <img src='../img/lab6/domains_dir.png' width='' alt=''> " +
+                    "   <img src='img/lab6/domains_dir.png' width='' alt=''> " +
                     "   <p> Вмикаємо сервер та відкриваємо нашу сторінку: </p>" +
-                    "   <img src='../img/lab6/open_server_context_menu.png' alt=''> " +
-                    "   <img src='../img/lab6/hosted_site.png' width='1000' alt=''> " +
+                    "   <img src='img/lab6/open_server_context_menu.png' alt=''> " +
+                    "   <img src='img/lab6/hosted_site.png' width='1000' alt=''> " +
                     "</div>";
                 break;
             case "utf8_encoding":
                 document.querySelector("main .content").innerHTML =
                     "<div class='elementImages'> " +
                     "   <p> Знаходимо файл конфігурації php.ini: </p>" +
-                    "   <img src='../img/lab6/find_php_ini.png' alt=''> " +
+                    "   <img src='img/lab6/find_php_ini.png' alt=''> " +
                     "   <p> Знаходимо параметр default_charset: </p>" +
-                    "   <img src='../img/lab6/php_ini_find_encode.png' alt=''>" +
+                    "   <img src='img/lab6/php_ini_find_encode.png' alt=''>" +
                     "   <p> Прибираємо \";\" : </p>" +
-                    "   <img src='../img/lab6/php_ini_set_encode.png' alt=''>" +
+                    "   <img src='img/lab6/php_ini_set_encode.png' alt=''>" +
                     "</div>";
                 break;
             case "feedback":
                 document.querySelector("main .content").innerHTML =
                     "<div class='elementImages'> " +
-                    "   <img src='../img/lab6/datetime_form_php.png' alt=''>" +
-                    "   <img src='../img/lab6/datetime_form_view.png' alt=''>" +
+                    "   <img src='img/lab6/datetime_form_php.png' alt=''>" +
+                    "   <img src='img/lab6/datetime_form_view.png' alt=''>" +
                     "</div>";
                 break;
             case "conclusions":
