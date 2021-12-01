@@ -760,12 +760,12 @@ function chooseInfo(button) {
                     "<a href='https://github.com/GangstaProgrammer/University_Web_Reports' target='_blank'>" +
                     "https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
                     "<a href='https://github.com/GangstaProgrammer/Films4You' target='_blank'>" +
-                    "https://github.com/GangstaProgrammer/Films4You - Сайт</a><br>" +
-                    "<a href='https://gangstaprogrammer.github.io/Films4You/' target='_blank'>" +
-                    "https://gangstaprogrammer.github.io/Films4You/ - Сайт(github page)</a>";
+                    "https://github.com/GangstaProgrammer/Films4You - Сайт</a>";
                 break;
             case "describing_model":
                 document.querySelector("main .content").innerHTML =
+                    "<h2> Варіант 3 (Комп'ютерна техніка) </h2>" +
+                    "<img src='img/lab7/var3_decription_model.jpg' width='900' alt=''>" +
                     "<h2> Варіант 4 (Фільмотека) </h2>" +
                     "<p>Виділимо базові сутності, атрибути та зв'язки предметної області \"Фільмотека\":</p>" +
                     "<table>" +
@@ -807,33 +807,124 @@ function chooseInfo(button) {
                     "       <td> Актор знявся у фільмі </td>" +
                     "       <td> фільм_id -> Фільми.id, актор_id -> Актори.id </td>" +
                     "   </tr>" +
+                    "</table><br>" +
+                    "<h2> Варіант 7 (Довідник з радіотехники) </h2>" +
+                    "<p>Виділимо базові сутності, атрибути та зв'язки предметної області \"Довідник з радіотехніки\":</p>" +
+                    "<table>" +
+                    "   <tr>" +
+                    "       <th> Сутності </th>" +
+                    "       <th> Атрибути </th>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Товари </td>" +
+                    "       <td> id, назва, опис, вага, ціна, матеріл, наявність, категорія_id, постачальник_id </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Категорії </td>" +
+                    "       <td> id, назва, опис </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Постачальники </td>" +
+                    "       <td> id, назва компанії, телефон, пошта, країна, товар_id </td>" +
+                    "   </tr>" +
+                    "</table><br>" +
+                    "<table>" +
+                    "   <tr>" +
+                    "       <th> Зв'язки </th>" +
+                    "       <th> Сутності та атрибути, що беруть участь у зв'зку </th>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Категорія товару </td>" +
+                    "       <td> Товар.категорія_id -> Категорія.id </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Поставка товару </td>" +
+                    "       <td> Постачальник.товар_id -> Товар.id, Товар.постачальник_id -> Постачальник.id </td>" +
+                    "   </tr>" +
                     "</table>";
                 break;
             case "infologic_model":
                 document.querySelector("main .content").innerHTML =
                     "<div style='text-align: center'> " +
-                    // "   <img src='img/lab7/var3_infologic_model.png' height='420' alt=''>" +
+                    "   <h2> Варіант 3 (Комп'ютерна техніка) </h2> " +
+                    "   <img src='img/lab7/var3_infologic_model.png' height='420' alt=''><br>" +
                     "   <h2> Варіант 4 (Фільмотека) </h2> " +
-                    "   <img src='img/lab7/var4_infologic_model.png' height='420' alt=''>" +
+                    "   <img src='img/lab7/var4_infologic_model.png' height='420' alt=''><br>" +
                     // "   <img src='img/lab7/var6_infologic_model.png' height='420' alt=''>" +
-                    // "   <img src='img/lab7/var7_infologic_model.png' height='420' alt=''>" +
+                    "   <h2> Варіант 7 (Довідник з радіотехники) </h2> " +
+                    "   <img src='img/lab7/var7_infologic_model.png' height='420' alt=''>" +
                     "</div>";
                 break;
             case "datalogic_model":
                 document.querySelector("main .content").innerHTML =
-                    "<div style='text-align: center'> " +
-                    // "   <img src='img/lab7/var3_datalogic_model.png' height='420' alt=''>" +
+                    "<div style='text-align: justify'> " +
+                    "   <h2> Варіант 3 (Комп'ютерна техніка) </h2> " +
+                    "   <img src='img/lab7/var3_datalogic_model.png' height='420' alt=''><br>" +
                     "   <h2> Варіант 4 (Фільмотека) </h2> " +
-                    "   <p style='text-align: left'>Для формалізації зв’язку між таблицями Films та Genres створюємо допоміжну " +
+                    "   <p style='text-align: justify'>Для формалізації зв’язку між таблицями Films та Genres створюємо допоміжну " +
                     "таблицю film_genre, що містить вторинні ключі – посилання на ідентифікатори таблиць," +
                     " які зв’язує. Аналогічно створюємо допоміжну таблицю film_actor.</p>" +
-                    "   <img src='img/lab7/var4_datalogic_model.png' height='420' alt=''>" +
+                    "   <img src='img/lab7/var4_datalogic_model.png' height='420' alt=''><br>" +
                     // "   <img src='img/lab7/var6_datalogic_model.png' height='420' alt=''>" +
-                    // "   <img src='img/lab7/var7_datalogic_model.png' height='420' alt=''>" +
+                    "   <h2> Варіант 7 (Довідник з радіотехники) </h2> " +
+                    "   <p style='text-align: justify'>Для формалізації зв’язку між таблицями Товари та Постачальники створюємо допоміжну " +
+                    "таблицю Товари_Постачальники, що містить вторинні ключі – посилання на ідентифікатори таблиць," +
+                    " які зв’язує.</p>" +
+                    "   <img src='img/lab7/var7_datalogic_model.png' height='420' alt=''>" +
                     "</div>";
                 break;
             case "db_phpMyAdmin":
                 document.querySelector("main .content").innerHTML =
+                    "<h2> Варіант 3 (Комп'ютерна техніка) </h2>" +
+                    "<p> Скрипти для створення БД та її об'єктів:</p>" +
+                    "<pre>CREATE TABLE `employees` (\n" +
+                    "  `id` int PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "  `Fname` varchar(30) NOT NULL,\n" +
+                    "  `Sname` varchar(50) NOT NULL,\n" +
+                    "  `Pname` varchar(50) NOT NULL,\n" +
+                    "  `Phone` varchar(20) NOT NULL,\n" +
+                    "  `Adress` varchar(250) NOT NULL,\n" +
+                    "  `Position` varchar(70) NOT NULL\n" +
+                    ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;\n" +
+                    "\n" +
+                    "CREATE TABLE `movement` (\n" +
+                    "  `id` int PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "  `From` varchar(50) NOT NULL,\n" +
+                    "  `To` varchar(100) NOT NULL,\n" +
+                    "  `Move_date` date NOT NULL\n" +
+                    ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 \n" +
+                    "\n" +
+                    "CREATE TABLE `suppliers` (\n" +
+                    "  `id` int PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "  `Fname` varchar(30) NOT NULL,\n" +
+                    "  `Sname` varchar(50) NOT NULL,\n" +
+                    "  `Name_organization` varchar(250) NOT NULL,\n" +
+                    "  `Phone` varchar(20) NOT NULL,\n" +
+                    "  `Adress` varchar(250) NOT NULL\n" +
+                    ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 \n" +
+                    "\n" +
+                    "CREATE TABLE `technic` (\n" +
+                    "  `id` int PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "  `Name` varchar(30) NOT NULL,\n" +
+                    "  `Description` varchar(250) NOT NULL,\n" +
+                    "  `Date_buy` date NOT NULL,\n" +
+                    "  `id_employee` int NOT NULL,\n" +
+                    "  `id_provider` int NOT NULL,\n" +
+                    "  `id_movement` int NOT NULL,\n" +
+                    "  `Availability` varchar(10) NOT NULL\n" +
+                    ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 \n" +
+                    "\n" +
+                    "ALTER TABLE `technic`\n" +
+                    "  ADD KEY `id_employee` (`id_employee`),\n" +
+                    "  ADD KEY `id_movement` (`id_movement`),\n" +
+                    "  ADD KEY `id_provider` (`id_provider`);\n" +
+                    "\n" +
+                    "ALTER TABLE `technic`\n" +
+                    "  ADD CONSTRAINT `technic_ibfk_1` FOREIGN KEY (`id_employee`) REFERENCES `employees` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,\n" +
+                    "  ADD CONSTRAINT `technic_ibfk_2` FOREIGN KEY (`id_movement`) REFERENCES `movement` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,\n" +
+                    "  ADD CONSTRAINT `technic_ibfk_3` FOREIGN KEY (`id_provider`) REFERENCES `suppliers` (`id`) ON DELETE ;\n</pre>" +
+                    "<p>Фізична модель даних:</p>" +
+                    "<img src='img/lab7/var3_physical_model.png' height='420' alt=''><br>" +
                     "<h2> Варіант 4 (Фільмотека) </h2>" +
                     "<p> Скрипти для створення БД та її об'єктів:</p>" +
                     "<pre>CREATE DATABASE FILMS_LIBRARY;\n" +
@@ -902,11 +993,72 @@ function chooseInfo(button) {
                     "ALTER TABLE film_genre\n" +
                     "    ADD CONSTRAINT FK_film_genre_actor_id_Genres\n" +
                     "        FOREIGN KEY (genre_id) REFERENCES Genres (id);\n</pre>" +
+                    "<p>Фізична модель даних:</p>" +
+                    "<img src='img/lab7/var4_physical_model.png' height='420' alt=''><br>" +
+                    "   <h2> Варіант 7 (Довідник з радіотехники) </h2> " +
+                    "<p> Скрипти для створення БД та її об'єктів:</p>" +
+                    "<pre>\n" +
+                    "\n" +
+                    "CREATE DATABASE IF NOT EXISTS `db` /*!40100 DEFAULT CHARACTER SET utf8 */;\n" +
+                    "USE `db`;\n" +
+                    "\n" +
+                    "CREATE TABLE IF NOT EXISTS `category` (\n" +
+                    "  `id` int(11) NOT NULL AUTO_INCREMENT,\n" +
+                    "  `name` varchar(50) NOT NULL DEFAULT '',\n" +
+                    "  `description` text NOT NULL,\n" +
+                    "  PRIMARY KEY (`id`)\n" +
+                    ") ENGINE=InnoDB DEFAULT CHARSET=utf8;\n" +
+                    "\n" +
+                    "\n" +
+                    "CREATE TABLE IF NOT EXISTS `product` (\n" +
+                    "  `id` int(11) NOT NULL AUTO_INCREMENT,\n" +
+                    "  `name` varchar(100) NOT NULL DEFAULT '',\n" +
+                    "  `category_id` int(11) NOT NULL DEFAULT '0',\n" +
+                    "  `description` text NOT NULL,\n" +
+                    "  `weight` float NOT NULL DEFAULT '0',\n" +
+                    "  `price` float NOT NULL DEFAULT '0',\n" +
+                    "  `material` varchar(50) NOT NULL DEFAULT '0',\n" +
+                    "  `available` tinyint(1) NOT NULL DEFAULT '0',\n" +
+                    "  PRIMARY KEY (`id`) USING BTREE,\n" +
+                    "  KEY `FK_product_category` (`category_id`),\n" +
+                    "  CONSTRAINT `FK_product_category` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION\n" +
+                    ") ENGINE=InnoDB DEFAULT CHARSET=utf8;\n" +
+                    "\n" +
+                    "\n" +
+                    "\n" +
+                    "CREATE TABLE IF NOT EXISTS `product_supplier` (\n" +
+                    "  `product_id` int(11) DEFAULT NULL,\n" +
+                    "  `supplier_id` int(11) DEFAULT NULL,\n" +
+                    "  KEY `FK__product` (`product_id`),\n" +
+                    "  KEY `FK__supplier` (`supplier_id`),\n" +
+                    "  CONSTRAINT `FK__product` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,\n" +
+                    "  CONSTRAINT `FK__supplier` FOREIGN KEY (`supplier_id`) REFERENCES `supplier` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION\n" +
+                    ") ENGINE=InnoDB DEFAULT CHARSET=utf8;\n" +
+                    "\n" +
+                    "\n" +
+                    "\n" +
+                    "CREATE TABLE IF NOT EXISTS `supplier` (\n" +
+                    "  `id` int(11) NOT NULL AUTO_INCREMENT,\n" +
+                    "  `name` varchar(50) NOT NULL DEFAULT '',\n" +
+                    "  `country` varchar(50) NOT NULL DEFAULT '',\n" +
+                    "  `email` varchar(50) NOT NULL DEFAULT '',\n" +
+                    "  `phone` varchar(50) NOT NULL DEFAULT '',\n" +
+                    "  PRIMARY KEY (`id`)\n" +
+                    ") ENGINE=InnoDB DEFAULT CHARSET=utf8;\n" +
+                    "\n</pre>" +
                     "<p>Фізична модель даних створена у phpMyAdmin</p>" +
-                    "<img src='img/lab7/var4_physical_model.png' height='420' alt=''>";
+                    "<img src='img/lab7/var7_physical_model.jpg' height='420' alt=''><br>";
                 break;
             case "interaction_php":
                 document.querySelector("main .content").innerHTML =
+                    "<h2> Варіант 3 (Комп'ютерна техніка) </h2>" +
+                    "<div class='elementImages'>" +
+                    "   <img src='img/lab7/var3_main_page.png' width='600' alt=''>" +
+                    "   <img src='img/lab7/var3_technics_page.png' width='900' alt=''>" +
+                    "   <img src='img/lab7/var3_employees_page.png' width='900' alt=''>" +
+                    "   <img src='img/lab7/var3_suppliers_page.png' width='600' alt=''>" +
+                    "   <img src='img/lab7/var3_movements_page.png' width='300' alt=''>" +
+                    "</div><br><br>" +
                     "<h2> Варіант 4 (Фільмотека) </h2>" +
                     "<div class='elementImages'>" +
                     "   <img src='img/lab7/var4_main_page.png' width='600' alt=''>" +
@@ -914,6 +1066,13 @@ function chooseInfo(button) {
                     "   <img src='img/lab7/var4_genres_page.png' width='300' alt=''>" +
                     "   <img src='img/lab7/var4_actors_page.png' width='300' alt=''>" +
                     "   <img src='img/lab7/var4_directors_page.png' width='300' alt=''>" +
+                    "</div><br><br>" +
+                    "<h2> Варіант 7 (Довідник з радіотехники) </h2>" +
+                    "<div class='elementImages'>" +
+                    "   <img src='img/lab7/var7_main_page.jpg' width='600' alt=''>" +
+                    "   <img src='img/lab7/var7_products.jpg' width='900' alt=''>" +
+                    "   <img src='img/lab7/var7_suppliers.jpg' width='900' alt=''>" +
+                    "   <img src='img/lab7/var7_categories.jpg' width='900' alt=''>" +
                     "</div>";
                 break;
             case "conclusions":
