@@ -79,9 +79,19 @@ function chooseLab(button) {
                 "<button id=\"interaction_php\" onclick=\"chooseInfo(this)\"> Взаємодія з БД <br> за допомогою PHP </button>" +
                 "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
             break;
-        // case "lab8":
-        //     document.querySelector("main .infoButtons").innerHTML = "";
-        //     break;
+        case "lab8":
+            document.querySelector("main .infoButtons").innerHTML =
+                "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\">Тема, Мета ЛР №7</button>" +
+                "<button id=\"describing_model\" onclick=\"chooseInfo(this)\"> Опис об'єктів предметної області </button>" +
+                "<button id=\"infologic_model\" onclick=\"chooseInfo(this)\"> Інфологічна модель </button>" +
+                "<button id=\"datalogic_model\" onclick=\"chooseInfo(this)\"> Датологічна модель </button>" +
+                "<button id=\"db_phpMyAdmin\" onclick=\"chooseInfo(this)\"> Реалізація БД у phpMyAdmin </button>" +
+                "<button id=\"interaction_php\" onclick=\"chooseInfo(this)\"> Інтеграція БД із сайтом </button>" +
+                "<button id=\"write_in_file\" onclick=\"chooseInfo(this)\"> Запис у файл </button>" +
+                "<button id=\"auth\" onclick=\"chooseInfo(this)\"> Авторизація </button>" +
+                "<button id=\"language_icons\" onclick=\"chooseInfo(this)\"> Іконки для вибору мови </button>" +
+                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
+            break;
         // case "lab9":
         //     document.querySelector("main .infoButtons").innerHTML = "";
         //     break;
@@ -1082,15 +1092,489 @@ function chooseInfo(button) {
                 break;
         }
     }
-    // if (document.querySelector(".labButtons .activeButton").id === "lab8") {
-    //     switch (button.id) {
-    //
-    //     }
-    // }
+    if (document.querySelector(".labButtons .activeButton").id === "lab8") {
+        switch (button.id) {
+            case "theme":
+                document.querySelector("main .content").innerHTML =
+                    "<p><b> Тема: </b> Інтерфейси взаємодії WEB-застосувань з системою керування баз даних (СУБД). " +
+                    "SQL-запити у PHP-сценаріях. Інтерфейси WEB-застосувань з СУБД. Використання сесій і cookies в " +
+                    "сценаріях авторизації. Розробка сценаріїв обробки даних з файлів.</p>" +
+                    "<p><b> Мета:</b>придбати практичні навички роботи взаємодії WEB-застосувань з СУБД, використання" +
+                    " сесій і cookies в сценаріях авторизації, розробки сценаріїв обробки даних з файлів.</p><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/University_Web_Reports' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/Films4You' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/Films4You - Сайт</a>";
+                break;
+            case "describing_model":
+                document.querySelector("main .content").innerHTML =
+                    "<p>База даних створюється для інформаційного обслуговування онлайн кіносервісу Films4You. БД " +
+                    "повинна містити дані про фільми, а саме його назву, рік, опис, постер, акторів, режисерів, " +
+                    "жанри, рейтинг, тривалість, прем'єру, країни у якій його зняли. </p>" +
+                    "<p>Виділимо базові сутності, атрибути та зв'язки предметної області \"Фільмотека\":</p>" +
+                    "<table>" +
+                    "   <tr>" +
+                    "       <th> Сутності </th>" +
+                    "       <th> Атрибути </th>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Фільми </td>" +
+                    "       <td> id, постер, назва, рік, країна, рейтинг IMDb, тривалість, опис, прем'єра, режисер_id </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Жанри </td>" +
+                    "       <td> id, назва </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Актори </td>" +
+                    "       <td> id, Ім'я, Прізвище </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Режисери </td>" +
+                    "       <td> id, Ім'я, Прізвище </td>" +
+                    "   </tr>" +
+                    "</table><br>" +
+                    "<table>" +
+                    "   <tr>" +
+                    "       <th> Зв'язки </th>" +
+                    "       <th> Сутності та атрибути, що беруть участь у зв'зку </th>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Зрежисував </td>" +
+                    "       <td> Фільми.режисер_id -> Режисери.id </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Фільм належить до жанру </td>" +
+                    "       <td> фільм_id -> Фільми.id, жанр_id -> Жанри.id </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Актор знявся у фільмі </td>" +
+                    "       <td> фільм_id -> Фільми.id, актор_id -> Актори.id </td>" +
+                    "   </tr>" +
+                    "</table>";
+                break;
+            case "infologic_model":
+                document.querySelector("main .content").innerHTML =
+                    "<p>Класифікація сутностей:</p>" +
+                    "<table>" +
+                    "   <tr>" +
+                    "       <th> Сутності </th>" +
+                    "       <th> Вид сутності </th>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Фільми </td>" +
+                    "       <td> Слабка </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Жанри </td>" +
+                    "       <td> Стержнева </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Актори </td>" +
+                    "       <td> Стержнева </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Режисери </td>" +
+                    "       <td> Стержнева </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Актор знявся у фільмі </td>" +
+                    "       <td> Асоціативна </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Фільм належить до жанру </td>" +
+                    "       <td> Асоціативна </td>" +
+                    "   </tr>" +
+                    "</table><br>" +
+                    "<p>Класифікація атрибутів:</p>" +
+                    "<table>" +
+                    "   <tr>" +
+                    "       <th> Сутності </th>" +
+                    "       <th> Атрибути </th>" +
+                    "       <th> Вид атрибуту </th>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='10'> Фільми </td>" +
+                    "       <td> id </td>" +
+                    "       <td> Ідентифікатор </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> постер </td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> назва </td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> рік </td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> опис </td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> країни </td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> тривалість</td>" +
+                    "       <td> Описовий</td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> рейтинг IMDb </td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> прем'єра </td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> режисер_id </td>" +
+                    "       <td> Допоміжний </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='2'> Жанри </td>" +
+                    "       <td> id </td>" +
+                    "       <td> Ідентифікатор </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> назва </td>" +
+                    "       <td> Вказівний </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='3'> Актори </td>" +
+                    "       <td> id </td>" +
+                    "       <td> Ідентифікатор </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> ім'я</td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Прізвище </td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='3'> Режисери </td>" +
+                    "       <td> id </td>" +
+                    "       <td> Ідентифікатор </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> ім'я</td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Прізвище </td>" +
+                    "       <td> Описовий </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='3'> Актор знявся у фільмі </td>" +
+                    "       <td> id </td>" +
+                    "       <td> Ідентифікатор </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> фільм_id </td>" +
+                    "       <td> Допоміжний </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> актор_id </td>" +
+                    "       <td> Допоміжний</td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='3'> Фільм належить до жанру </td>" +
+                    "       <td> id </td>" +
+                    "       <td> Ідентифікатор </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> фільм_id </td>" +
+                    "       <td> Допоміжний </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> жанр_id </td>" +
+                    "       <td> Допоміжний</td>" +
+                    "   </tr>" +
+                    "</table><br>" +
+                    "<p> ER-діаграма (нотація Мартіна), створена за допомогою ERDplus: </p>" +
+                    "<img src='img/lab8/infologic_model.png' height='420' alt=''>";
+                break;
+            case "datalogic_model":
+                document.querySelector("main .content").innerHTML =
+                    "<p> Опис та класифікація зв'язків: </p>" +
+                    "<table>" +
+                    "   <tr>" +
+                    "       <th> Зв'язки </th>" +
+                    "       <th> Опис </th>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Зрежисував </td>" +
+                    "       <td> Режисери 1 : M Фільми, безумовний; формалізується допоміжним атрибутом в " +
+                    "           сутності «Фільми» </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Фільм належить до жанру </td>" +
+                    "       <td> Фільми М : N Жанри, безумовний; необхідна формалізація за допомогою асоціативної " +
+                    "           сутності (бінарний зв’язок)" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> Актор знявся у фільмі </td>" +
+                    "       <td> Фільми М : N Актори, безумовний; необхідна формалізація за допомогою асоціативної " +
+                    "           сутності (бінарний зв’язок)" +
+                    "   </tr>" +
+                    "</table><br><br>" +
+                    "<div style='text-align: justify'>" +
+                    "   <p>Для формалізації зв’язку між таблицями Films та Genres створюємо допоміжну " +
+                    "   таблицю film_genre, що містить вторинні ключі – посилання на ідентифікатори таблиць," +
+                    "   які зв’язує. Аналогічно створюємо допоміжну таблицю film_actor.</p>" +
+                    "   <img src='img/lab8/datalogic_model.png' height='420' alt=''><br>" +
+                    "</div><br><br>" +
+                    "<p>Визначимо типи даних та обмежння цілісності для нашої моделі даних:</p>" +
+                    "<table>" +
+                    "   <tr>" +
+                    "       <th> Сутності </th>" +
+                    "       <th> Атрибути </th>" +
+                    "       <th> Вид атрибуту </th>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='10'> Films </td>" +
+                    "       <td> id </td>" +
+                    "       <td> INT PRIMARY KEY NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> poster </td>" +
+                    "       <td> BLOB NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> name </td>" +
+                    "       <td> VARCHAR(100) NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> year </td>" +
+                    "       <td> YEAR NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> description </td>" +
+                    "       <td> TEXT NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> countries </td>" +
+                    "       <td> VARCHAR(100) NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> duration_minutes </td>" +
+                    "       <td> INT NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> IMDb rating </td>" +
+                    "       <td> FLOAT(2,1) </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> premiere </td>" +
+                    "       <td> DATE NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> director_id </td>" +
+                    "       <td> INT FOREIGN KEY NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='2'> Genres </td>" +
+                    "       <td> id </td>" +
+                    "       <td> INT PRIMARY KEY NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> name </td>" +
+                    "       <td> VARCHAR(50) NOT NULL UNIQUE </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='3'> Actors </td>" +
+                    "       <td> id </td>" +
+                    "       <td> INT PRIMARY KEY NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> first_name </td>" +
+                    "       <td> VARCHAR(50) NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> last_name </td>" +
+                    "       <td> VARCHAR(50) NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='3'> Directors </td>" +
+                    "       <td> id </td>" +
+                    "       <td> INT PRIMARY KEY NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> first_name</td>" +
+                    "       <td> VARCHAR(50) NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> last_name </td>" +
+                    "       <td> VARCHAR(50) NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='3'> film_actor </td>" +
+                    "       <td> id </td>" +
+                    "       <td> INT PRIMARY KEY NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> film_id </td>" +
+                    "       <td> INT FOREIGN KEY NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> actor_id </td>" +
+                    "       <td> INT FOREIGN KEY NOT NULL</td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td rowspan='3'> film_genre </td>" +
+                    "       <td> id </td>" +
+                    "       <td> INT PRIMARY KEY NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> film_id </td>" +
+                    "       <td> INT FOREIGN KEY NOT NULL </td>" +
+                    "   </tr>" +
+                    "   <tr>" +
+                    "       <td> genre_id </td>" +
+                    "       <td> INT FOREIGN KEY NOT NULL</td>" +
+                    "   </tr>" +
+                    "</table>";
+                break;
+            case "db_phpMyAdmin":
+                document.querySelector("main .content").innerHTML =
+                    "<p> Скрипти для створення БД та її об'єктів:</p>" +
+                    "<pre>CREATE DATABASE FILMS4YOU;\n" +
+                    "USE FILMS4YOU;\n" +
+                    "\n" +
+                    "CREATE TABLE Films\n" +
+                    "(\n" +
+                    "    id               INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    director_id      INT                            NOT NULL,\n" +
+                    "    poster           BLOB                           NOT NULL,\n" +
+                    "    name             VARCHAR(255)                   NOT NULL,\n" +
+                    "    year             YEAR                           NOT NULL,\n" +
+                    "    country          VARCHAR(100)                   NOT NULL,\n" +
+                    "    duration_minutes INT                            NOT NULL,\n" +
+                    "    description      TEXT                           NOT NULL,\n" +
+                    "    premiere         DATE                           NOT NULL,\n" +
+                    "    IMDb_rating      FLOAT(2, 1)\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE Directors\n" +
+                    "(\n" +
+                    "    id         INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    first_name VARCHAR(50)                    NOT NULL,\n" +
+                    "    last_name  VARCHAR(50)                    NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE Actors\n" +
+                    "(\n" +
+                    "    id         INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    first_name VARCHAR(50)                    NOT NULL,\n" +
+                    "    last_name  VARCHAR(50)                    NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE Genres\n" +
+                    "(\n" +
+                    "    id   INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    name VARCHAR(30)                    NOT NULL UNIQUE\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE film_actor\n" +
+                    "(\n" +
+                    "    id       INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    film_id  INT                            NOT NULL,\n" +
+                    "    actor_id INT                            NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE film_genre\n" +
+                    "(\n" +
+                    "    id       INT PRIMARY KEY AUTO_INCREMENT NOT NULL,\n" +
+                    "    film_id  INT                            NOT NULL,\n" +
+                    "    genre_id INT                            NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "ALTER TABLE Films\n" +
+                    "    ADD CONSTRAINT FK_Films_director_id_Directors\n" +
+                    "        FOREIGN KEY (director_id) REFERENCES Directors (id);\n" +
+                    "\n" +
+                    "ALTER TABLE film_actor\n" +
+                    "    ADD CONSTRAINT FK_film_actor_film_id_Films\n" +
+                    "        FOREIGN KEY (film_id) REFERENCES Films (id);\n" +
+                    "\n" +
+                    "ALTER TABLE film_actor\n" +
+                    "    ADD CONSTRAINT FK_film_actor_actor_id_Actors\n" +
+                    "        FOREIGN KEY (actor_id) REFERENCES Actors (id);\n" +
+                    "\n" +
+                    "ALTER TABLE film_genre\n" +
+                    "    ADD CONSTRAINT FK_film_genre_film_id_Films\n" +
+                    "        FOREIGN KEY (film_id) REFERENCES Films (id);\n" +
+                    "\n" +
+                    "ALTER TABLE film_genre\n" +
+                    "    ADD CONSTRAINT FK_film_genre_actor_id_Genres\n" +
+                    "        FOREIGN KEY (genre_id) REFERENCES Genres (id);</pre><br>" +
+                    "<p>Фізична модель даних, створена у phpMyAdmin:</p>" +
+                    "<img src='img/lab8/physical_model.png' height='420' alt=''><br>";
+                break;
+            case "interaction_php":
+                document.querySelector("main .content").innerHTML =
+                    "<div class='elementImages'>" +
+                    "   <img src='img/lab8/admin_auth.png' width='300' alt=''>" +
+                    "   <img src='img/lab8/main_page.png' width='500' alt=''>" +
+                    "   <img src='img/lab8/films_page.png' width='900' alt=''>" +
+                    "   <img src='img/lab8/genres_page.png' width='300' alt=''>" +
+                    "   <img src='img/lab8/actors_page.png' width='300' alt=''>" +
+                    "   <img src='img/lab8/directors_page.png' width='300' alt=''>" +
+                    "   <img src='img/lab8/novelties_php_query.png' width='900' alt=''>" +
+                    "   <img src='img/lab8/novelties_view.png' width='900' alt=''>" +
+                    "   <img src='img/lab8/top_rating_php_query.png' width='900' alt=''>" +
+                    "   <img src='img/lab8/top_rating_view.png' width='900' alt=''>" +
+                    "   <img src='img/lab8/now_playing_php_query.png' width='900' alt=''>" +
+                    "   <img src='img/lab8/now_playing_view.png' width='900' alt=''>" +
+                    "</div>";
+                break;
+            case "write_in_file":
+                document.querySelector("main .content").innerHTML =
+                    "<div class='elementImages'>" +
+                    "   <img src='img/lab8/writing_to_file.png' width='1000' alt=''>" +
+                    "   <img src='img/lab8/top_rating_log.png' alt=''>" +
+                    "</div>";
+                break;
+            case "auth":
+                document.querySelector("main .content").innerHTML =
+                    "<div class='elementImages'>" +
+                    "   <img src='img/lab8/auth_block.png' width='400' alt=''>" +
+                    "   <img src='img/lab8/sign_in_yana.png' width='400' alt=''>" +
+                    "   <img src='img/lab8/auth_php.png' width='1000' alt=''>" +
+                    "   <img src='img/lab8/empty_input_error.png' width='1000' alt=''>" +
+                    "   <img src='img/lab8/no_user_error.png' width='1000' alt=''>" +
+                    "   <img src='img/lab8/registration_page.png' width='1000' alt=''>" +
+                    "   <img src='img/lab8/create_user_php.png' width='1000' alt=''>" +
+                    "   <img src='img/lab8/users_db.png' width='1000' alt=''>" +
+                    "</div>";
+                break;
+            case "language_icons":
+                document.querySelector("main .content").innerHTML =
+                    "<div class='elementImages'>" +
+                    "   <img src='img/lab8/lang_icons_view.png' width='200' alt=''>" +
+                    "   <img src='img/lab8/lang_icons_html.png' width='600' alt=''>" +
+                    "   <img src='img/lab8/set_lang_php.png' width='1000' alt=''>" +
+                    "   <img src='img/lab8/language_class.png' width='1000' alt=''>" +
+                    "   <img src='img/lab8/system_en_ini.png' width='1000' alt=''>" +
+                    "   <img src='img/lab8/register_php.png' width='1000' alt=''>" +
+                    "   <img src='img/lab8/registration_en_lang.png' width='1000' alt=''>" +
+                    "</div>";
+                break;
+            case "conclusions":
+                document.querySelector("main .content").innerHTML =
+                    "<p>Виконавши цю лабораторну роботу, ми придбали практичні навички взаємодії WEB-застосувань з СУБД, " +
+                    "використання сесій і cookies в сценаріях авторизації, розробки сценаріїв обробки даних з файлів.</p>";
+                break;
+        }
+    }
     // if (document.querySelector(".labButtons .activeButton").id === "lab9") {
     //     switch (button.id) {
     //
     //     }
     // }
 }
-

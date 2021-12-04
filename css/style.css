@@ -14,8 +14,6 @@ body {
 }
 
 .title {
-    padding: 5px 10px;
-    line-height: 28px;
     text-shadow: 0 0 2px #fff;
     text-align: center;
 }
@@ -23,29 +21,28 @@ body {
 h1, h2 {
     font-weight: bold;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 26px;
 }
 
 .labButtons {
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    margin: 10px 0 20px 0;
+    margin: 10px 0;
 }
 
 .infoButtons {
-    width: 22%;
+    width: 23%;
     float: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 460px;
+    height: 500px;
 }
 
 .labButtons button, .infoButtons button {
     background: #ececec;
     border: 2px solid black;
-    padding: 10px 10px;
     color: black;
     display: block;
     border-radius: 5px;
@@ -55,10 +52,12 @@ h1, h2 {
 }
 
 .labButtons button {
+    padding: 7px;
     width: 130px;
 }
 
 .infoButtons button {
+    padding: 7px 10px;
     width: 100%;
     border-radius: 20px;
 }
@@ -91,12 +90,12 @@ button.activeButton:hover {
     border-radius: 0 0 10px 0;
     background: #ececec;
     width: 76%;
-    min-height: 460px;
+    min-height: 500px;
     max-height: 60vh;
     border: 1px solid black;
     float: right;
     box-shadow: #393939 5px 5px 15px;
-    padding: 20px;
+    padding: 15px;
     font-size: 18px;
     overflow: auto;
     overflow-x: hidden;
