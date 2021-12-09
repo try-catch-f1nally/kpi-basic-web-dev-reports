@@ -818,6 +818,8 @@ function chooseInfo(button) {
                     "       <td> фільм_id -> Фільми.id, актор_id -> Актори.id </td>" +
                     "   </tr>" +
                     "</table><br>" +
+                    "<h2> Варіант 6 (Розклад руху залізничного транспорту) </h2>" +
+                    "<img src='img/lab7/var6_decription_model.png' width='900' alt=''>" +
                     "<h2> Варіант 7 (Довідник з радіотехники) </h2>" +
                     "<p>Виділимо базові сутності, атрибути та зв'язки предметної області \"Довідник з радіотехніки\":</p>" +
                     "<table>" +
@@ -860,7 +862,8 @@ function chooseInfo(button) {
                     "   <img src='img/lab7/var3_infologic_model.png' height='420' alt=''><br>" +
                     "   <h2> Варіант 4 (Фільмотека) </h2> " +
                     "   <img src='img/lab7/var4_infologic_model.png' height='420' alt=''><br>" +
-                    // "   <img src='img/lab7/var6_infologic_model.png' height='420' alt=''>" +
+                    "   <h2> Варіант 6 (Розклад руху залізничного транспорту) </h2> " +
+                    "   <img src='img/lab7/var6_infologic_model.png' height='420' alt=''>" +
                     "   <h2> Варіант 7 (Довідник з радіотехники) </h2> " +
                     "   <img src='img/lab7/var7_infologic_model.png' height='420' alt=''>" +
                     "</div>";
@@ -875,7 +878,8 @@ function chooseInfo(button) {
                     "таблицю film_genre, що містить вторинні ключі – посилання на ідентифікатори таблиць," +
                     " які зв’язує. Аналогічно створюємо допоміжну таблицю film_actor.</p>" +
                     "   <img src='img/lab7/var4_datalogic_model.png' height='420' alt=''><br>" +
-                    // "   <img src='img/lab7/var6_datalogic_model.png' height='420' alt=''>" +
+                    "   <h2> Варіант 6 (Розклад руху залізничного транспорту) </h2> " +
+                     "   <img src='img/lab7/var6_datalogic_model.png' height='420' alt=''>" +
                     "   <h2> Варіант 7 (Довідник з радіотехники) </h2> " +
                     "   <p style='text-align: justify'>Для формалізації зв’язку між таблицями Товари та Постачальники створюємо допоміжну " +
                     "таблицю Товари_Постачальники, що містить вторинні ключі – посилання на ідентифікатори таблиць," +
@@ -1005,7 +1009,48 @@ function chooseInfo(button) {
                     "        FOREIGN KEY (genre_id) REFERENCES Genres (id);\n</pre>" +
                     "<p>Фізична модель даних:</p>" +
                     "<img src='img/lab7/var4_physical_model.png' height='420' alt=''><br>" +
-                    "   <h2> Варіант 7 (Довідник з радіотехники) </h2> " +
+
+                    "<h2> Варіант 6 (Розклад руху залізничного транспорту) </h2> " +
+                    "<p> Скрипти для створення БД та її об'єктів:</p>" +
+                    "<pre>CREATE TABLE timetables\n" +
+                    "(\n" +
+                    "    Id INT NOT NULL,\n" +
+                    "    time_arrival_id TIME NOT NULL,\n" +
+                    "    time_departure_id TIME NOT NULL,\n" +
+                    "    station_id INT NOT NULL,\n" +
+                    "    train_id INT NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE stations\n" +
+                    "(\n" +
+                    "    Id INT NOT NULL,\n" +
+                    "    name VARCHAR(20) NOT NULL,\n" +
+                    "    address VARCHAR(20) NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "CREATE TABLE trains\n" +
+                    "(\n" +
+                    "    Id INT NOT NULL,\n" +
+                    "    name VARCHAR(20) NOT NULL,\n" +
+                    "    start_station_id INT NOT NULL,\n" +
+                    "    end_station_id INT NOT NULL\n" +
+                    ");\n" +
+                    "\n" +
+                    "ALTER TABLE timetables ADD PRIMARY KEY (Id);\n" +
+                    "ALTER TABLE stations ADD PRIMARY KEY (Id);\n" +
+                    "ALTER TABLE trains ADD PRIMARY KEY (Id);\n" +
+                    "\n" +
+                    "ALTER TABLE timetables\n" +
+                    "ADD FOREIGN KEY (train_id) REFERENCES trains(Id);\n" +
+                    "ALTER TABLE timetables\n" +
+                    "ADD FOREIGN KEY (station_id) REFERENCES stations(Id);\n" +
+                    "ALTER TABLE trains\n" +
+                    "ADD FOREIGN KEY (start_station_id) REFERENCES stations(Id);\n" +
+                    "ALTER TABLE trains\n" +
+                    "ADD FOREIGN KEY (end_station_id) REFERENCES stations(Id);\n" +
+                    "\n</pre>" +
+                    "<img src='img/lab7/var6_physical_model.jpg' height='420' alt=''><br>" +
+                    "<h2> Варіант 7 (Довідник з радіотехники) </h2> " +
                     "<p> Скрипти для створення БД та її об'єктів:</p>" +
                     "<pre>\n" +
                     "\n" +
@@ -1076,6 +1121,13 @@ function chooseInfo(button) {
                     "   <img src='img/lab7/var4_genres_page.png' width='300' alt=''>" +
                     "   <img src='img/lab7/var4_actors_page.png' width='300' alt=''>" +
                     "   <img src='img/lab7/var4_directors_page.png' width='300' alt=''>" +
+                    "</div><br><br>" +
+                    "<h2> Варіант 6 (Розклад руху залізничного транспорту) </h2>" +
+                    "<div class='elementImages'>" +
+                    "   <img src='img/lab7/var6_main_page.png' width='600' alt=''>" +
+                    "   <img src='img/lab7/var6_stations_page.png' width='300' alt=''>" +
+                    "   <img src='img/lab7/var6_update_page.png' width='300' alt=''>" +
+                    "   <img src='img/lab7/var6_trains_page.png' width='300' alt=''>" +
                     "</div><br><br>" +
                     "<h2> Варіант 7 (Довідник з радіотехники) </h2>" +
                     "<div class='elementImages'>" +
