@@ -81,7 +81,7 @@ function chooseLab(button) {
             break;
         case "lab8":
             document.querySelector("main .infoButtons").innerHTML =
-                "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\">Тема, Мета ЛР №7</button>" +
+                "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\">Тема, Мета ЛР №8</button>" +
                 "<button id=\"describing_model\" onclick=\"chooseInfo(this)\"> Опис об'єктів предметної області </button>" +
                 "<button id=\"infologic_model\" onclick=\"chooseInfo(this)\"> Інфологічна модель </button>" +
                 "<button id=\"datalogic_model\" onclick=\"chooseInfo(this)\"> Датологічна модель </button>" +
@@ -1334,7 +1334,7 @@ function chooseInfo(button) {
                     "   <tr>" +
                     "       <th> Сутності </th>" +
                     "       <th> Атрибути </th>" +
-                    "       <th> Вид атрибуту </th>" +
+                    "       <th> Обмеження цілісності </th>" +
                     "   </tr>" +
                     "   <tr>" +
                     "       <td rowspan='10'> Films </td>" +
