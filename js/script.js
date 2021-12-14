@@ -77,7 +77,7 @@ function chooseLab(button) {
                 "<button id=\"datalogic_model\" onclick=\"chooseInfo(this)\"> Датологічна модель </button>" +
                 "<button id=\"db_phpMyAdmin\" onclick=\"chooseInfo(this)\"> Реалізація БД у phpMyAdmin </button>" +
                 "<button id=\"interaction_php\" onclick=\"chooseInfo(this)\"> Взаємодія з БД <br> за допомогою PHP </button>" +
-                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
+                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновки </button>";
             break;
         case "lab8":
             document.querySelector("main .infoButtons").innerHTML =
@@ -90,11 +90,17 @@ function chooseLab(button) {
                 "<button id=\"write_in_file\" onclick=\"chooseInfo(this)\"> Запис у файл </button>" +
                 "<button id=\"auth\" onclick=\"chooseInfo(this)\"> Авторизація </button>" +
                 "<button id=\"language_icons\" onclick=\"chooseInfo(this)\"> Іконки для вибору мови </button>" +
-                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновок </button>";
+                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновки </button>";
             break;
-        // case "lab9":
-        //     document.querySelector("main .infoButtons").innerHTML = "";
-        //     break;
+        case "lab9":
+            document.querySelector("main .infoButtons").innerHTML =
+                "<button id=\"theme\" onclick=\"chooseInfo(this)\" class=\"activeButton\">Тема, Мета ЛР №9</button>" +
+                "<button id=\"ajax_task2\" onclick=\"chooseInfo(this)\"> AJAX-запити (2 пункт) </button>" +
+                "<button id=\"ajax_on_site\" onclick=\"chooseInfo(this)\"> AJAX-запити у власному сайті </button>" +
+                "<button id=\"full_functionality\" onclick=\"chooseInfo(this)\"> Повний список функціоналу програми </button>" +
+                "<button id=\"comparing_functionality\" onclick=\"chooseInfo(this)\"> Порівняння функціоналу першої та дев'ятої ЛР </button>" +
+                "<button id=\"conclusions\" onclick=\"chooseInfo(this)\"> Висновки </button>";
+            break;
     }
     chooseInfo(document.querySelector(".infoButtons").firstChild);
 }
@@ -126,15 +132,13 @@ function chooseInfo(button) {
                     "                <li> Пошук фільмів за допомогою фільтрів та сортування</li>" +
                     "                <li> Перегляд інформації про фільм</li>" +
                     "                <li> Додавання коментаря</li>" +
-                    "                <li> Можливість ставити вподобайки/невподобайки</li>" +
                     "                <li> Додавання фільму в список улюблених</li>" +
                     "            </ul>" +
                     "            <br>" +
                     "            <h3> Адміністратор: </h3>" +
                     "            <ul class='properties'>" +
-                    "                <li> Додавання фільму в список улюблених</li>" +
+                    "                <li> Додавання інформації до бази даних </li>" +
                     "                <li> Видалення залишених користувачами коментарів до фільму</li>" +
-                    "                <li> Блокування користувачів</li>" +
                     "            </ul>"
                 break;
             case "topic":
@@ -819,7 +823,7 @@ function chooseInfo(button) {
                     "   </tr>" +
                     "</table><br>" +
                     "<h2> Варіант 6 (Розклад руху залізничного транспорту) </h2>" +
-                    "<img src='img/lab7/var6_decription_model.png' width='900' alt=''>" +
+                    "<img src='img/lab7/var6_decription_model.png' width='900' alt=''><br>" +
                     "<h2> Варіант 7 (Довідник з радіотехники) </h2>" +
                     "<p>Виділимо базові сутності, атрибути та зв'язки предметної області \"Довідник з радіотехніки\":</p>" +
                     "<table>" +
@@ -1624,9 +1628,77 @@ function chooseInfo(button) {
                 break;
         }
     }
-    // if (document.querySelector(".labButtons .activeButton").id === "lab9") {
-    //     switch (button.id) {
-    //
-    //     }
-    // }
+    if (document.querySelector(".labButtons .activeButton").id === "lab9") {
+        switch (button.id) {
+            case "theme":
+                document.querySelector("main .content").innerHTML =
+                    "<p><b> Тема: </b> Асинхронна взаємодія клієнтської і серверної частин WEB-застосувань з " +
+                    "використанням технології AJAX. формування AJAX-запиту засобами jQuery." +
+                    "<p><b> Мета:</b>придбати практичні навички роботи основ асинхронного обміну даними мовою " +
+                    "JavaScript за допомогою технології Ajax та бібліотеки Jquery, формування  Аjax-запиту засобами " +
+                    "jQuery при реалізації практичних задач Web-програмування.</p><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/University_Web_Reports' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/University_Web_Reports - Звіт</a><br>" +
+                    "<a href='https://github.com/GangstaProgrammer/Films4You' target='_blank'>" +
+                    "https://github.com/GangstaProgrammer/Films4You - Сайт</a>";
+                break;
+            case "ajax_task2":
+                document.querySelector("main .content").innerHTML =
+                    "<h2> Варіант 4 (Редактор текстових файлів) </h2>" +
+                    "<div class='elementImages'> " +
+                    "   <img src='img/lab9/var4_main_page_script.png' width='1000' alt=''>" +
+                    "   <img src='img/lab9/var4_main_page_view.png' width='1000' alt=''>" +
+                    "   <img src='img/lab9/var4_create_new_file_page_view.png' width='1000' alt=''> " +
+                    "   <img src='img/lab9/var4_edit_file_page_view.png' width='1000' alt=''> " +
+                    "   <img src='img/lab9/var4_alert_view.png' width='' alt=''> " +
+                    "   <img src='img/lab9/var4_edit_file_script.png' width='' alt=''> " +
+                    "   <img src='img/lab9/var4_alert_view.png' width='' alt=''> " +
+                    "   <img src='img/lab9/var4_json_file.png' width='' alt='900'> " +
+                    "   <img src='img/lab9/var4_edit_file_php.png' width='1000' alt=''> " +
+                    "   <img src='img/lab9/var4_log_file.png' width='' alt=''> " +
+                    "</div>";
+                break;
+            case "ajax_on_site":
+                document.querySelector("main .content").innerHTML =
+                    "<div class='elementImages'>" +
+                    "   <img src='img/lab9/ajax_actors_js.png' alt=''>" +
+                    "   <img src='img/lab9/ajax_directors_js.png' alt=''>" +
+                    "   <img src='img/lab9/ajax_genres_js.png' alt=''>" +
+                    "   <img src='img/lab9/ajax_autocomplete_js.png' alt=''>" +
+                    "   <img src='img/lab9/ajax_autocomplete.png' alt=''>" +
+                    "   <img src='img/lab9/get_film_names_php.png' alt=''>" +
+                    "</div>";
+                break;
+            case "full_functionality":
+                document.querySelector("main .content").innerHTML =
+                    "<p>На даному етапі наш сайт володіє наступним функціоналом:" +
+                    "   <li> Перегляд основної сторінки;</li>" +
+                    "   <li> Вибір мови сайту (російська, українська, англійська);</li>" +
+                    "   <li> Реєстрація на сайті;</li>" +
+                    "   <li> Пошук фільмів за назвою;</li>" +
+                    "   <li> Авторизація (для зареєстрованих користувачів);</li>" +
+                    "   <li> Додавання фільмів, жанрів, акторів, режисерів до бази даних (адміністратор);</li>" +
+                    "   <li> Перегляд фільмів, жанрів, акторів, режисерів у базі даних (адміністратор);</li>" +
+                    "</p>";
+                break;
+            case "comparing_functionality":
+                document.querySelector("main .content").innerHTML =
+                    "<p>" +
+                    "Порівнявши з описаним функціоналом з 1-ї лабораторної роботи, можна зробити висновки, " +
+                    "що частину заплановаго функціоналу було не зроблено, а саме:" +
+                    "   <li>Пошук фільмів за допомогою фільтрів та сортування;</li>" +
+                    "   <li>Пошук інформації про фільм;</li>" +
+                    "   <li>Додавання коментарів (зереєстрований користувач);</li>" +
+                    "   <li>Додавання фільмів у список улюблених (зереєстрований користувач);</li>" +
+                    "   <li>Видалення коментарів залишинеми користувачами до фільму (адміністратор);</li>" +
+                    "</p>";
+                break;
+            case "conclusions":
+                document.querySelector("main .content").innerHTML =
+                    "<p>Виконавши цю лабораторну роботу, ми придбали практичні навички роботи основ асинхронного обміну " +
+                    "даними мовою JavaScript за допомогою технології Ajax та бібліотеки Jquery, формування " +
+                    "Аjax-запиту засобами jQuery при реалізації практичних задач Web-програмування.</p>";
+                break;
+        }
+    }
 }
